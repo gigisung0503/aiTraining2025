@@ -42,7 +42,7 @@ By the end of this training, participants will:
 | **Opening Remarks**                                     | Introduction, training objectives, and agenda                                             |                                                                 |
 | **Comparative Analysis of AI Tools**                    | A brief comparison of ChatGPT, DeepSeek, Copilot, and in-house LLM                          |                                                                 |
 | **Hands-on Demonstration of AI Tools**                  |                                                                                           |                                                                 |
-| **Prompt Engineering – Theory & Individual Exercises**  |                                                                                           | [Detailed Session Page →](promptEngineering/promptEngineering.qmd)|
+| **Prompt Engineering – Theory & Individual Exercises**  |                                                                                           | [Detailed Session Page →](pomptEngineering/promptEngineering.qmd)|
 | **Managing AI Risks**                                   | Recognizing AI hallucinations, verifying outputs, and ensuring human oversight              |                                                                 |
 | **Q&A and Wrap-up**                                     |                                                                                           |                                                                 |
 
