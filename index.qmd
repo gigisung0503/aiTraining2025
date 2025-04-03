@@ -1,7 +1,84 @@
 ---
-title: "aiTraining2025"
+title: "AI Training 2025: Unleashing AI in Public Health Emergencies"
+date: "2025-04-28"
 ---
 
+
+
+Welcome to the official landing page for **AI Training 2025: Unleashing AI in Public Health Emergencies**. This training is designed for WHE personnel to build practical skills and understand key ethical and technical aspects of AI in public health emergencies.
+
+## Training Overview
+
+**Proposed Dates:**  
+- **Day 1:** 28 & 30 April 2025  
+- **Day 2:** 5 & 7 May 2025
+
+**Mode of Delivery:** Online/Offline (Half-day sessions)  
+**Total Duration:** 6 Hours (3 hours each day)
+
+**Trainers/Facilitators:**  
+- ABDULLAH, Ali  
+- AL-KHSHBI, Arafat Hussein  
+- Ahmed Ramy  
+- ELBARBARY, Mona  
+- SAMI, Hazal  
+- SUNG, Ji Yeon
+
+**Target Audience:** WHE Personnel
+
+## Training Objectives
+
+By the end of this training, participants will:
+
+- Understand the newly released **“Responsible AI @ WHO: Updated guidelines.”**
+- Gain hands-on experience with AI tools (e.g., ChatGPT, DeepSeek, Copilot) and learn prompt engineering.
+- Recognize ethical considerations, limitations, and best practices for applying AI in WHO emergency contexts.
+
+## Program Structure & Timeline
+
+### Day 1 (28 & 30 April 2025)
+- **Opening Remarks** – Introduction, training objectives, and agenda.
+- **Comparative Analysis of AI Tools** – A brief comparison of ChatGPT, DeepSeek, Copilot, and in-house LLM.
+- **Hands-on Demonstration of AI Tools**
+- **Prompt Engineering – Theory & Individual Exercises**  
+  [Detailed Session Page →](promptEngineering/promptEngineering.qmd)
+- **Managing AI Risks** – Recognizing AI hallucinations, verifying outputs, and ensuring human oversight.
+- **Q&A and Wrap-up**
+
+### Day 2 (5 & 7 May 2025)
+- **Ethical AI Guidelines & Responsible AI** – Overview of WHO guidelines and open discussions on data privacy and ethics.
+- **AI Applications in WHO Emergency Response** – Brainstorming and developing potential use cases.
+- **Parallel Workgroup Exercises** – Group-based tasks on data management, document development, and preparedness.
+- **Managing AI Risks Session**  
+  [Detailed Session Page →](managing-ai-risks.qmd)
+- **Workgroup Presentations & Feedback**
+- **Final Review and Closing Remarks**
+
+## Session Pages
+
+For detailed content, interactive exercises, and additional resources, please visit:
+
+- **[Prompt Engineering – Theory & Individual Exercises](prompt-engineering.qmd)**
+- **[Managing AI Risks](managing-ai-risks.qmd)**
+
+## Contact & Additional Resources
+
+For further details or clarifications, please reach out to:
+
+- **Mr. Arafat AL-KHSHBI:** alkhshbia@who.int  
+- **Dr. Mona Elbarbary:** elbarbarym@who.int
+
+We look forward to a productive and engaging training experience!
+
+
+
+
+
+
+
+
+
+---
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

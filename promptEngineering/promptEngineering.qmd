@@ -1,0 +1,171 @@
+---
+title: "Prompt Engineering – Theory & Individual Exercises"
+author: "SUNG, Ji Yeon (Gigi)"
+date: "2025-04-28"
+# draft: True
+---
+
+**Presenter(s):** SUNG, Ji Yeon (Gigi)  
+**Duration:** 60 min  
+**Target Audience:** Individual WHE officers with the least coding knowledge  
+
+**Summary:**  
+This session introduces essential prompt engineering techniques to technical officers with little to no coding experience. 
+The focus is on understanding decision rules to determine when prompt engineering is cost-effective for repetitive tasks.
+You can also practice prompt engineering techiniques with exercise materials below. 
+
+---
+
+## 1. Introduction
+
+- **Purpose of Session:**  
+  Understand the fundamentals of prompt engineering and its application in automating workflows.
+- **What is Prompt Engineering?**  
+  A method to design effective prompts for AI tools, particularly when consistent output is required.
+- **Use Case:**  
+  Ideal for automating repetitive tasks and ensuring consistency in outputs.
+- **Overview:**  
+  Briefly review the session structure and objectives.
+
+---
+
+## 2. Key Concepts & Decision Making
+
+### 2.1 LLM Types
+
+1. **Base Models:**  
+   - Not designed for conversation; they simply predict text based on input.
+   - For example, asking “What is the capital of France?” might return unexpected answers like “What is the capital of Egypt?” or “What is the capital of the USA?”
+   - Typically used as a starting point for fine-tuning.
+
+2. **Chat Models:**  
+   - Examples include ChatGPT, Copilot, and Gemini.
+   - Primarily intended for end users, such as HIM technical officers.
+
+### 2.2 When & Why Use Prompt Engineering
+
+1. **Decision Rules & Trade-offs:**  
+   - Assess whether the complexity and repetition of a task justify the effort of developing a detailed prompt.
+   - **Example Comparisons:**  
+     - *One-off questions* (e.g., “What is the medical representation of Cholera?”) vs. *repetitive workflows* (e.g., generating rapid risk analyses, situation reports, OSM).  
+     - *Direct Q&A* vs. *advanced prompt design* (unstructured long queries vs. step-by-step prompts with example formats).  
+   - *(Ng, Zhou, and Sangani, n.d.)*
+
+2. **Other Approaches:**  
+   - **Fine-tuning:** Customizing a base model for specific needs.
+   - **RAG (Retrieval Augmented Generation):** Leveraging retrieval methods for domain-specific or up-to-date data.
+   - *Note: These methods will be discussed further in the Managing AI Risks session.*
+
+---
+
+## 3. Core Prompting Techniques (20 min)
+
+1. **In-Context Learning:**  
+   - Techniques include Zero-shot, One-shot, and Few-shot prompting.
+   - Provides context to the model to achieve the desired output format.
+   - Larger LLMs may perform better even with simpler prompts.
+
+2. **Role Prompting:**  
+   - Assigning a role to the model to ensure more consistent responses.
+
+3. **Chain-of-Thought Prompting:**  
+   - Encourages the model to reason step by step.
+   - **Example Instruction:**  
+     “Think step by step, explain each intermediate step, and then provide the final answer based on your analysis.”
+
+4. **Summarization & Providing New Information:**  
+   - Acknowledge that a model’s training data may not include the most recent events.
+
+---
+
+## 4. Individual Exercises (15 min)
+
+### Exercise 1: Scenario-Based Decision Making
+
+- **Task:**  
+  Present 2–3 realistic scenarios that WHE officers might face (e.g., outbreak report, data analysis request, or drafting situation briefs).
+  
+- **Instructions:**  
+  - Identify the best approach for each scenario using decision rules from Section 2.2.
+  - Consider factors such as task frequency (one-off vs. repeated), complexity (simple Q&A vs. multi-step analysis), and urgency/accuracy needs.
+  
+- **Scenarios:**  
+  1. **Scenario 1:** Need a quick, one-off answer about the medical representation of Cholera (Direct Q&A).  
+  2. **Scenario 2:** Generate weekly situation reports using a standard outline (requiring prompt engineering).  
+  3. **Scenario 3:** Obtain highly domain-specific or updated references for an outbreak (suggests an organization-wide approach, such as RAG or fine-tuning).
+
+### Exercise 2: Practicing Prompt Techniques
+
+- **Task:**  
+  Generate a weekly situation report for occupied Palestine territory for 01 to 13 October 2024 using provided SITREP data.
+
+- **Subtasks:**
+
+  1. **Zero-shot Prompt:**  
+     ````
+     Generate a weekly situation report for the period of 01–13 October 2024 related to conflict-affected areas in Gaza, referencing the information in the {text} above.
+     ````
+  
+  2. **Few-shot Prompt:**  
+     - **SITREP Data:**
+       ````
+       41,950 deaths and 97,550 injuries reported.
+       1.9 million displaced (90% of the population), many multiple times.
+       Overcrowded shelters offer 1.5m² per person, far below the minimum Sphere standard of 3.5m².
+       86% of Gaza under evacuation orders, leaving civilians with no safe relocation options.
+       1.2 million children and 75% of women report psychological distress.
+       … 
+       ````
+     - **SITREP Format:**
+       ````
+       SITREP Format:
+       1. Key Highlights:
+       2. Background:
+       3. Health System Updates:
+       4. Priority Needs & Actions:
+       5. Conclusion:
+       ````
+     - **Instruction:**  
+       Using the above format, generate a weekly situation report.
+
+  3. **Role Prompt:**  
+     ````
+     You are a WHO technical officer specializing in emergency response. Your task is to draft a weekly situation report on the ongoing crisis in occupied Palestine territory.
+     ````
+  
+  4. **Chain-of-Thought Prompt:**  
+     - **Instruction:**  
+       First, break down the main categories of information:
+       1. Key data points (casualties, injuries, displacements, etc.)
+       2. Most critical health concerns
+       3. Potential solutions or actions
+       4. Final structured SITREP summary  
+       Only provide the final SITREP summary after detailing and analyzing these steps.
+
+---
+
+## 5. Takeaways
+
+- Reflect on the cost and benefit of developing detailed prompts before implementation.
+- Recognize the value of iterative prompt design and verification to improve outcomes.
+
+---
+
+## References
+
+- **Ng, Andrew, Sharon Zhou, and Amit Sangani.**  
+  *Improving Accuracy of LLM Applications - DeepLearning.AI.*  
+  [DeepLearning.AI](https://learn.deeplearning.ai/courses/improving-accuracy-of-llm-applications/lesson/zd29x/introduction)
+
+- **Sangani, Amit, and Andrew Ng.**  
+  *Prompt Engineering with Llama 2&3 - DeepLearning.AI.*  
+  [DeepLearning.AI](https://learn.deeplearning.ai/courses/prompt-engineering-with-llama-2/lesson/mpjme/prompt-engineering-techniques)
+
+---
+
+**Keywords (English / 한국어):**  
+- **Prompt Engineering** / **프롬프트 엔지니어링**  
+- **LLM Types** / **LLM 유형**  
+- **Decision Making** / **의사결정**  
+- **Chain-of-Thought** / **체인 오브 띠-생각**  
+- **Interactive Exercises** / **인터랙티브 실습**
