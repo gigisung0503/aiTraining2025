@@ -1,8 +1,11 @@
 project:
   type: website
+  output-dir: docs
+  preview:
+    port: 3333
 
 website:
-  title: "aiTraining2025"
+  title: "AI Training 2025"
   navbar:
     left:
       - href: index.qmd

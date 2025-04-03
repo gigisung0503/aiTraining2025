@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
+    "section": "",
+    "text": "Welcome to the official landing page for AI Training 2025: Unleashing AI in Public Health Emergencies. This training is designed for WHE personnel to build practical skills and understand key ethical and technical aspects of AI in public health emergencies."
+  },
+  {
+    "objectID": "index.html#training-overview",
+    "href": "index.html#training-overview",
+    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
+    "section": "Training Overview",
+    "text": "Training Overview\nProposed Dates:\n- Day 1: 28 & 30 April 2025\n- Day 2: 5 & 7 May 2025\nMode of Delivery: Online/Offline (Half-day sessions)\nTotal Duration: 6 Hours (3 hours each day)\nTrainers/Facilitators:\n- ABDULLAH, Ali\n- AL-KHSHBI, Arafat Hussein\n- Ahmed Ramy\n- ELBARBARY, Mona\n- SAMI, Hazal\n- SUNG, Ji Yeon\nTarget Audience: WHE Personnel"
+  },
+  {
+    "objectID": "index.html#training-objectives",
+    "href": "index.html#training-objectives",
+    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
+    "section": "Training Objectives",
+    "text": "Training Objectives\nBy the end of this training, participants will:\n\nUnderstand the newly released “Responsible AI @ WHO: Updated guidelines.”\nGain hands-on experience with AI tools (e.g., ChatGPT, DeepSeek, Copilot) and learn prompt engineering.\nRecognize ethical considerations, limitations, and best practices for applying AI in WHO emergency contexts."
+  },
+  {
+    "objectID": "index.html#program-structure-timeline",
+    "href": "index.html#program-structure-timeline",
+    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
+    "section": "Program Structure & Timeline",
+    "text": "Program Structure & Timeline\n\nDay 1 (28 & 30 April 2025)\n\nOpening Remarks – Introduction, training objectives, and agenda.\nComparative Analysis of AI Tools – A brief comparison of ChatGPT, DeepSeek, Copilot, and in-house LLM.\nHands-on Demonstration of AI Tools\nPrompt Engineering – Theory & Individual Exercises\nDetailed Session Page →\nManaging AI Risks – Recognizing AI hallucinations, verifying outputs, and ensuring human oversight.\nQ&A and Wrap-up\n\n\n\nDay 2 (5 & 7 May 2025)\n\nEthical AI Guidelines & Responsible AI – Overview of WHO guidelines and open discussions on data privacy and ethics.\nAI Applications in WHO Emergency Response – Brainstorming and developing potential use cases.\nParallel Workgroup Exercises – Group-based tasks on data management, document development, and preparedness.\nManaging AI Risks Session\nDetailed Session Page →\nWorkgroup Presentations & Feedback\nFinal Review and Closing Remarks"
+  },
+  {
+    "objectID": "index.html#session-pages",
+    "href": "index.html#session-pages",
+    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
+    "section": "Session Pages",
+    "text": "Session Pages\nFor detailed content, interactive exercises, and additional resources, please visit:\n\nPrompt Engineering – Theory & Individual Exercises\nManaging AI Risks"
+  },
+  {
+    "objectID": "index.html#contact-additional-resources",
+    "href": "index.html#contact-additional-resources",
+    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
+    "section": "Contact & Additional Resources",
+    "text": "Contact & Additional Resources\nFor further details or clarifications, please reach out to:\n\nMr. Arafat AL-KHSHBI: alkhshbia@who.int\n\nDr. Mona Elbarbary: elbarbarym@who.int\n\nWe look forward to a productive and engaging training experience!\n\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "promptEngineering/promptEngineering.html",
+    "href": "promptEngineering/promptEngineering.html",
+    "title": "Prompt Engineering – Theory & Individual Exercises",
+    "section": "",
+    "text": "Presenter(s): SUNG, Ji Yeon (Gigi)\nDuration: 60 min\nTarget Audience: Individual WHE officers with the least coding knowledge\nSummary:\nThis session introduces essential prompt engineering techniques to technical officers with little to no coding experience. The focus is on understanding decision rules to determine when prompt engineering is cost-effective for repetitive tasks. You can also practice prompt engineering techiniques with exercise materials below."
+  },
+  {
+    "objectID": "promptEngineering/promptEngineering.html#introduction",
+    "href": "promptEngineering/promptEngineering.html#introduction",
+    "title": "Prompt Engineering – Theory & Individual Exercises",
+    "section": "1. Introduction",
+    "text": "1. Introduction\n\nPurpose of Session:\nUnderstand the fundamentals of prompt engineering and its application in automating workflows.\nWhat is Prompt Engineering?\nA method to design effective prompts for AI tools, particularly when consistent output is required.\nUse Case:\nIdeal for automating repetitive tasks and ensuring consistency in outputs.\nOverview:\nBriefly review the session structure and objectives."
+  },
+  {
+    "objectID": "promptEngineering/promptEngineering.html#key-concepts-decision-making",
+    "href": "promptEngineering/promptEngineering.html#key-concepts-decision-making",
+    "title": "Prompt Engineering – Theory & Individual Exercises",
+    "section": "2. Key Concepts & Decision Making",
+    "text": "2. Key Concepts & Decision Making\n\n2.1 LLM Types\n\nBase Models:\n\nNot designed for conversation; they simply predict text based on input.\nFor example, asking “What is the capital of France?” might return unexpected answers like “What is the capital of Egypt?” or “What is the capital of the USA?”\nTypically used as a starting point for fine-tuning.\n\nChat Models:\n\nExamples include ChatGPT, Copilot, and Gemini.\nPrimarily intended for end users, such as HIM technical officers.\n\n\n\n\n2.2 When & Why Use Prompt Engineering\n\nDecision Rules & Trade-offs:\n\nAssess whether the complexity and repetition of a task justify the effort of developing a detailed prompt.\nExample Comparisons:\n\nOne-off questions (e.g., “What is the medical representation of Cholera?”) vs. repetitive workflows (e.g., generating rapid risk analyses, situation reports, OSM).\n\nDirect Q&A vs. advanced prompt design (unstructured long queries vs. step-by-step prompts with example formats).\n\n\n(Ng, Zhou, and Sangani, n.d.)\n\nOther Approaches:\n\nFine-tuning: Customizing a base model for specific needs.\nRAG (Retrieval Augmented Generation): Leveraging retrieval methods for domain-specific or up-to-date data.\nNote: These methods will be discussed further in the Managing AI Risks session."
+  },
+  {
+    "objectID": "promptEngineering/promptEngineering.html#core-prompting-techniques-20-min",
+    "href": "promptEngineering/promptEngineering.html#core-prompting-techniques-20-min",
+    "title": "Prompt Engineering – Theory & Individual Exercises",
+    "section": "3. Core Prompting Techniques (20 min)",
+    "text": "3. Core Prompting Techniques (20 min)\n\nIn-Context Learning:\n\nTechniques include Zero-shot, One-shot, and Few-shot prompting.\nProvides context to the model to achieve the desired output format.\nLarger LLMs may perform better even with simpler prompts.\n\nRole Prompting:\n\nAssigning a role to the model to ensure more consistent responses.\n\nChain-of-Thought Prompting:\n\nEncourages the model to reason step by step.\nExample Instruction:\n“Think step by step, explain each intermediate step, and then provide the final answer based on your analysis.”\n\nSummarization & Providing New Information:\n\nAcknowledge that a model’s training data may not include the most recent events."
+  },
+  {
+    "objectID": "promptEngineering/promptEngineering.html#individual-exercises-15-min",
+    "href": "promptEngineering/promptEngineering.html#individual-exercises-15-min",
+    "title": "Prompt Engineering – Theory & Individual Exercises",
+    "section": "4. Individual Exercises (15 min)",
+    "text": "4. Individual Exercises (15 min)\n\nExercise 1: Scenario-Based Decision Making\n\nTask:\nPresent 2–3 realistic scenarios that WHE officers might face (e.g., outbreak report, data analysis request, or drafting situation briefs).\nInstructions:\n\nIdentify the best approach for each scenario using decision rules from Section 2.2.\nConsider factors such as task frequency (one-off vs. repeated), complexity (simple Q&A vs. multi-step analysis), and urgency/accuracy needs.\n\nScenarios:\n\nScenario 1: Need a quick, one-off answer about the medical representation of Cholera (Direct Q&A).\n\nScenario 2: Generate weekly situation reports using a standard outline (requiring prompt engineering).\n\nScenario 3: Obtain highly domain-specific or updated references for an outbreak (suggests an organization-wide approach, such as RAG or fine-tuning).\n\n\n\n\nExercise 2: Practicing Prompt Techniques\n\nTask:\nGenerate a weekly situation report for occupied Palestine territory for 01 to 13 October 2024 using provided SITREP data.\nSubtasks:\n\nZero-shot Prompt:\nGenerate a weekly situation report for the period of 01–13 October 2024 related to conflict-affected areas in Gaza, referencing the information in the {text} above.\nFew-shot Prompt:\n\nSITREP Data:\n41,950 deaths and 97,550 injuries reported.\n1.9 million displaced (90% of the population), many multiple times.\nOvercrowded shelters offer 1.5m² per person, far below the minimum Sphere standard of 3.5m².\n86% of Gaza under evacuation orders, leaving civilians with no safe relocation options.\n1.2 million children and 75% of women report psychological distress.\n… \nSITREP Format:\nSITREP Format:\n1. Key Highlights:\n2. Background:\n3. Health System Updates:\n4. Priority Needs & Actions:\n5. Conclusion:\nInstruction:\nUsing the above format, generate a weekly situation report.\n\nRole Prompt:\nYou are a WHO technical officer specializing in emergency response. Your task is to draft a weekly situation report on the ongoing crisis in occupied Palestine territory.\nChain-of-Thought Prompt:\n\nInstruction:\nFirst, break down the main categories of information:\n\nKey data points (casualties, injuries, displacements, etc.)\nMost critical health concerns\nPotential solutions or actions\nFinal structured SITREP summary\nOnly provide the final SITREP summary after detailing and analyzing these steps."
+  },
+  {
+    "objectID": "promptEngineering/promptEngineering.html#takeaways",
+    "href": "promptEngineering/promptEngineering.html#takeaways",
+    "title": "Prompt Engineering – Theory & Individual Exercises",
+    "section": "5. Takeaways",
+    "text": "5. Takeaways\n\nReflect on the cost and benefit of developing detailed prompts before implementation.\nRecognize the value of iterative prompt design and verification to improve outcomes."
+  },
+  {
+    "objectID": "promptEngineering/promptEngineering.html#references",
+    "href": "promptEngineering/promptEngineering.html#references",
+    "title": "Prompt Engineering – Theory & Individual Exercises",
+    "section": "References",
+    "text": "References\n\nNg, Andrew, Sharon Zhou, and Amit Sangani.\nImproving Accuracy of LLM Applications - DeepLearning.AI.\nDeepLearning.AI\nSangani, Amit, and Andrew Ng.\nPrompt Engineering with Llama 2&3 - DeepLearning.AI.\nDeepLearning.AI\n\n\nKeywords (English / 한국어):\n- Prompt Engineering / 프롬프트 엔지니어링\n- LLM Types / LLM 유형\n- Decision Making / 의사결정\n- Chain-of-Thought / 체인 오브 띠-생각\n- Interactive Exercises / 인터랙티브 실습"
+  }
+]
