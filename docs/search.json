@@ -1,52 +1,31 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "pretraining.html",
+    "href": "pretraining.html",
+    "title": "Pretraining Material",
     "section": "",
-    "text": "About this site"
+    "text": "This page provides a curated list of resources to help you get started with AI concepts, including LLMs, Generative AI, Machine Learning, and more. The resources are grouped into three categories: For Beginners, For Intermediates, and WHO Resources."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
-    "section": "",
-    "text": "Welcome to the official landing page for AI Training 2025: Unleashing AI in Public Health Emergencies. This training is designed for WHE personnel to build practical skills and understand key ethical and technical aspects of AI in public health emergencies."
+    "objectID": "pretraining.html#for-beginners",
+    "href": "pretraining.html#for-beginners",
+    "title": "Pretraining Material",
+    "section": "▶︎ For Beginners",
+    "text": "▶︎ For Beginners\nWhat are LLMs, GenAI, Machine Learning, and so on…\n\n(Video) AI, Machine Learning, Deep Learning and Generative AI Explained by IBM\nWatch Video\n\n\n(Video) The Evolution of AI: Traditional AI vs. Generative AI by IBM\nWatch Video\n\n\n(Online Course) Generative AI for Everyone by Deeplearning.AI\nVisit Course\nNote: You can audit the course for free. You first have to sign up for DeepLearning.ai\n\n(Online Course) Reasoning with o1\nVisit Course\nLearn how to reason with the most recent GPT model, o1, including prompting.\nPrerequisites: Basic Python and Jupyter Notebook.\nNote: You first have to sign up for DeepLearning.ai"
   },
   {
-    "objectID": "index.html#training-overview",
-    "href": "index.html#training-overview",
-    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
-    "section": "Training Overview",
-    "text": "Training Overview\nProposed Dates:\n- Day 1: 28 & 30 April 2025\n- Day 2: 5 & 7 May 2025\nMode of Delivery: Online/Offline (Half-day sessions)\nTotal Duration: 6 Hours (3 hours each day)\nTrainers/Facilitators:\n- ABDULLAH, Ali\n- AL-KHSHBI, Arafat Hussein\n- Ahmed Ramy\n- ELBARBARY, Mona\n- SAMI, Hazal\n- SUNG, Ji Yeon\nTarget Audience: WHE Personnel"
+    "objectID": "pretraining.html#for-intermediates",
+    "href": "pretraining.html#for-intermediates",
+    "title": "Pretraining Material",
+    "section": "▶︎ For Intermediates",
+    "text": "▶︎ For Intermediates\nBeyond using AI chatbots…\n\n(Video) A Survey of Techniques for Maximizing LLM Performance by OpenAI\nWatch Video\n\n\n(Video) What are AI Agents? by IBM\nWatch Video\n\n\n(Online Course) Building Systems with the ChatGPT API by DeepLearning.AI\nVisit Course\nNote: You first have to sign up for DeepLearning.ai"
   },
   {
-    "objectID": "index.html#training-objectives",
-    "href": "index.html#training-objectives",
-    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
-    "section": "Training Objectives",
-    "text": "Training Objectives\nBy the end of this training, participants will:\n\nUnderstand the newly released “Responsible AI @ WHO: Updated guidelines.”\nGain hands-on experience with AI tools (e.g., ChatGPT, DeepSeek, Copilot) and learn prompt engineering.\nRecognize ethical considerations, limitations, and best practices for applying AI in WHO emergency contexts."
-  },
-  {
-    "objectID": "index.html#program-structure-timeline",
-    "href": "index.html#program-structure-timeline",
-    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
-    "section": "Program Structure & Timeline",
-    "text": "Program Structure & Timeline\n\nDay 1 (28 & 30 April 2025)\n\nOpening Remarks – Introduction, training objectives, and agenda.\nComparative Analysis of AI Tools – A brief comparison of ChatGPT, DeepSeek, Copilot, and in-house LLM.\nHands-on Demonstration of AI Tools\nPrompt Engineering – Theory & Individual Exercises\nDetailed Session Page →\nManaging AI Risks – Recognizing AI hallucinations, verifying outputs, and ensuring human oversight.\nQ&A and Wrap-up\n\n\n\nDay 2 (5 & 7 May 2025)\n\nEthical AI Guidelines & Responsible AI – Overview of WHO guidelines and open discussions on data privacy and ethics.\nAI Applications in WHO Emergency Response – Brainstorming and developing potential use cases.\nParallel Workgroup Exercises – Group-based tasks on data management, document development, and preparedness.\nManaging AI Risks Session\nDetailed Session Page →\nWorkgroup Presentations & Feedback\nFinal Review and Closing Remarks"
-  },
-  {
-    "objectID": "index.html#session-pages",
-    "href": "index.html#session-pages",
-    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
-    "section": "Session Pages",
-    "text": "Session Pages\nFor detailed content, interactive exercises, and additional resources, please visit:\n\nPrompt Engineering – Theory & Individual Exercises\nManaging AI Risks"
-  },
-  {
-    "objectID": "index.html#contact-additional-resources",
-    "href": "index.html#contact-additional-resources",
-    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
-    "section": "Contact & Additional Resources",
-    "text": "Contact & Additional Resources\nFor further details or clarifications, please reach out to:\n\nMr. Arafat AL-KHSHBI: alkhshbia@who.int\n\nDr. Mona Elbarbary: elbarbarym@who.int\n\nWe look forward to a productive and engaging training experience!\n\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "objectID": "pretraining.html#who-resources",
+    "href": "pretraining.html#who-resources",
+    "title": "Pretraining Material",
+    "section": "WHO Resources",
+    "text": "WHO Resources\n\n(Video) Responsible AI @ WHO\n\n\nWatch Video"
   },
   {
     "objectID": "promptEngineering/promptEngineering.html",
@@ -96,5 +75,47 @@
     "title": "Prompt Engineering – Theory & Individual Exercises",
     "section": "References",
     "text": "References\n\nNg, Andrew, Sharon Zhou, and Amit Sangani.\nImproving Accuracy of LLM Applications - DeepLearning.AI.\nDeepLearning.AI\nSangani, Amit, and Andrew Ng.\nPrompt Engineering with Llama 2&3 - DeepLearning.AI.\nDeepLearning.AI\n\n\nKeywords (English / 한국어):\n- Prompt Engineering / 프롬프트 엔지니어링\n- LLM Types / LLM 유형\n- Decision Making / 의사결정\n- Chain-of-Thought / 체인 오브 띠-생각\n- Interactive Exercises / 인터랙티브 실습"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
+    "section": "",
+    "text": "Welcome to the official landing page for AI Training 2025: Unleashing AI in Public Health Emergencies. This training is designed for WHE personnel to build practical skills and understand key ethical and technical aspects of AI in public health emergencies."
+  },
+  {
+    "objectID": "index.html#training-overview",
+    "href": "index.html#training-overview",
+    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
+    "section": "Training Overview",
+    "text": "Training Overview\nProposed Dates:\n- Day 1: 28 & 30 April 2025\n- Day 2: 5 & 7 May 2025\nMode of Delivery: Online/Offline (Half-day sessions)\nTotal Duration: 6 Hours (3 hours each day)\nTrainers/Facilitators:\n- ABDULLAH, Ali\n- AL-KHSHBI, Arafat Hussein\n- Ahmed Ramy\n- ELBARBARY, Mona\n- SAMI, Hazal\n- SUNG, Ji Yeon\nTarget Audience: WHE Personnel"
+  },
+  {
+    "objectID": "index.html#training-objectives",
+    "href": "index.html#training-objectives",
+    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
+    "section": "Training Objectives",
+    "text": "Training Objectives\nBy the end of this training, participants will:\n\nUnderstand the newly released “Responsible AI @ WHO: Updated guidelines.”\nGain hands-on experience with AI tools (e.g., ChatGPT, DeepSeek, Copilot) and learn prompt engineering.\nRecognize ethical considerations, limitations, and best practices for applying AI in WHO emergency contexts."
+  },
+  {
+    "objectID": "index.html#program-structure-timeline",
+    "href": "index.html#program-structure-timeline",
+    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
+    "section": "Program Structure & Timeline",
+    "text": "Program Structure & Timeline\n\nDay 1 (28 & 30 April 2025)\n\n\n\nSession\nDescription\nLink\n\n\n\n\nOpening Remarks\nIntroduction, training objectives, and agenda\n\n\n\nComparative Analysis of AI Tools\nA brief comparison of ChatGPT, DeepSeek, Copilot, and in-house LLM\n\n\n\nHands-on Demonstration of AI Tools\n\n\n\n\nPrompt Engineering – Theory & Individual Exercises\n\nDetailed Session Page →\n\n\nManaging AI Risks\nRecognizing AI hallucinations, verifying outputs, and ensuring human oversight\n\n\n\nQ&A and Wrap-up\n\n\n\n\n\n\n\nDay 2 (5 & 7 May 2025)\n\n\n\nSession\nDescription\nLink\n\n\n\n\nEthical AI Guidelines & Responsible AI\nOverview of WHO guidelines and open discussions on data privacy and ethics\n\n\n\nAI Applications in WHO Emergency Response\nBrainstorming and developing potential use cases\n\n\n\nParallel Workgroup Exercises\nGroup-based tasks on data management, document development, and preparedness\n\n\n\nManaging AI Risks Session\n\nDetailed Session Page →\n\n\nWorkgroup Presentations & Feedback\n\n\n\n\nFinal Review and Closing Remarks"
+  },
+  {
+    "objectID": "index.html#contact-additional-resources",
+    "href": "index.html#contact-additional-resources",
+    "title": "AI Training 2025: Unleashing AI in Public Health Emergencies",
+    "section": "Contact & Additional Resources",
+    "text": "Contact & Additional Resources\nFor further details or clarifications, please reach out to:\n\nMr. Arafat AL-KHSHBI: alkhshbia@who.int\n\nDr. Mona Elbarbary: elbarbarym@who.int\n\nWe look forward to a productive and engaging training experience!\n\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   }
 ]

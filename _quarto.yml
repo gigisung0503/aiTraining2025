@@ -10,7 +10,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      # - about.qmd
+      - href: pretraining.qmd
+        text: Pretraining
+
 
 format:
   html:

@@ -37,29 +37,33 @@ By the end of this training, participants will:
 ## Program Structure & Timeline
 
 ### Day 1 (28 & 30 April 2025)
-- **Opening Remarks** – Introduction, training objectives, and agenda.
-- **Comparative Analysis of AI Tools** – A brief comparison of ChatGPT, DeepSeek, Copilot, and in-house LLM.
-- **Hands-on Demonstration of AI Tools**
-- **Prompt Engineering – Theory & Individual Exercises**  
-  [Detailed Session Page →](promptEngineering/promptEngineering.qmd)
-- **Managing AI Risks** – Recognizing AI hallucinations, verifying outputs, and ensuring human oversight.
-- **Q&A and Wrap-up**
+| Session                                                 | Description                                                                               | Link                                                            |
+|---------------------------------------------------------|-------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
+| **Opening Remarks**                                     | Introduction, training objectives, and agenda                                             |                                                                 |
+| **Comparative Analysis of AI Tools**                    | A brief comparison of ChatGPT, DeepSeek, Copilot, and in-house LLM                          |                                                                 |
+| **Hands-on Demonstration of AI Tools**                  |                                                                                           |                                                                 |
+| **Prompt Engineering – Theory & Individual Exercises**  |                                                                                           | [Detailed Session Page →](promptEngineering/promptEngineering.qmd)|
+| **Managing AI Risks**                                   | Recognizing AI hallucinations, verifying outputs, and ensuring human oversight              |                                                                 |
+| **Q&A and Wrap-up**                                     |                                                                                           |                                                                 |
+
 
 ### Day 2 (5 & 7 May 2025)
-- **Ethical AI Guidelines & Responsible AI** – Overview of WHO guidelines and open discussions on data privacy and ethics.
-- **AI Applications in WHO Emergency Response** – Brainstorming and developing potential use cases.
-- **Parallel Workgroup Exercises** – Group-based tasks on data management, document development, and preparedness.
-- **Managing AI Risks Session**  
-  [Detailed Session Page →](managing-ai-risks.qmd)
-- **Workgroup Presentations & Feedback**
-- **Final Review and Closing Remarks**
+| Session                                         | Description                                                                               | Link                                                           |
+|-------------------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| **Ethical AI Guidelines & Responsible AI**      | Overview of WHO guidelines and open discussions on data privacy and ethics                  |                                                                |
+| **AI Applications in WHO Emergency Response**   | Brainstorming and developing potential use cases                                          |                                                                |
+| **Parallel Workgroup Exercises**                | Group-based tasks on data management, document development, and preparedness                |                                                                |
+| **Managing AI Risks Session**                   |                                                                                           | [Detailed Session Page →](managing-ai-risks.qmd)               |
+| **Workgroup Presentations & Feedback**          |                                                                                           |                                                                |
+| **Final Review and Closing Remarks**            |                                                                                           |                                                                |
 
-## Session Pages
+
+<!-- ## Session Pages
 
 For detailed content, interactive exercises, and additional resources, please visit:
 
 - **[Prompt Engineering – Theory & Individual Exercises](prompt-engineering.qmd)**
-- **[Managing AI Risks](managing-ai-risks.qmd)**
+- **[Managing AI Risks](managing-ai-risks.qmd)** -->
 
 ## Contact & Additional Resources
 

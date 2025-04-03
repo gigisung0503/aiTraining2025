@@ -1,0 +1,67 @@
+---
+title: "Pretraining Material"
+# author: "Your Name"
+date: "2025-04-03"
+---
+
+This page provides a curated list of resources to help you get started with AI concepts, including LLMs, Generative AI, Machine Learning, and more. The resources are grouped into three categories: **For Beginners**, **For Intermediates**, and **WHO Resources**.
+
+---
+
+## ▶︎ For Beginners
+
+*What are LLMs, GenAI, Machine Learning, and so on...*
+
+1. **(Video)** *AI, Machine Learning, Deep Learning and Generative AI Explained by IBM*  
+   [Watch Video](https://youtu.be/qYNweeDHiyU?si=_cb6qpn-ZqvUQM4k1)
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/qYNweeDHiyU?si=X3gMJ4POOxuT98bm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+2. **(Video)** *The Evolution of AI: Traditional AI vs. Generative AI by IBM*  
+   [Watch Video](https://youtu.be/SNZSm02_fpU?si=wcH3i-MbcCx6cJE)
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/SNZSm02_fpU?si=oBxeX8DLi0RUokyW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+3. **(Online Course)** *Generative AI for Everyone by Deeplearning.AI*  
+   [Visit Course](https://www.deeplearning.ai/courses/generative-ai-for-everyone/)  
+   *Note: You can audit the course for free. You first have to sign up for DeepLearning.ai*
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dfeoJ55EcXs?si=XZuUF2b5YDpg_E3u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+4. **(Online Course)** *Reasoning with o1*  
+   [Visit Course](https://learn.deeplearning.ai/search?q=Reasoning+with+o1)  
+   *Learn how to reason with the most recent GPT model, o1, including prompting.\
+   **Prerequisites:** Basic Python and Jupyter Notebook.*\
+   *Note: You first have to sign up for DeepLearning.ai*
+
+---
+
+## ▶︎ For Intermediates
+
+*Beyond using AI chatbots...*
+
+1. **(Video)** *A Survey of Techniques for Maximizing LLM Performance by OpenAI*  
+   [Watch Video](https://youtu.be/ahnGLM-RC1Y?si=-9GjW--p-bP-aE3-1)
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/ahnGLM-RC1Y?si=eoG4YXxwQLSIxHsH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+2. **(Video)** *What are AI Agents? by IBM*  
+   [Watch Video](https://youtu.be/F8NKVhkZZWI?si=R19Cu7PjZt2jZoes)
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/F8NKVhkZZWI?si=ZQSjpbuqRHj1NU7W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+3. **(Online Course)** *Building Systems with the ChatGPT API by DeepLearning.AI*  
+   [Visit Course](https://learn.deeplearning.ai/search?q=building+systems+with+the+ChatGPT+API)\
+   *Note: You first have to sign up for DeepLearning.ai*
+
+---
+
+## WHO Resources
+
+1. **(Video)** *Responsible AI @ WHO*  
+
+   <iframe src="data/Implication of AI WHO policy for the toolkit.pdf" width="600" height="500"></iframe>
+
+   [Watch Video](https://worldhealthorg.sharepoint.com/sites/AIFrontier/_layouts/15/stream.aspx?id=%2Fsites%2FAIFrontier%2FShared%20Documents%2FGuidelines%2FResponsible%20AI%20%40%20WHO%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E7f682180%2Dcd74%2D4a14%2Dbc11%2Db9e2ef02a99c1)
