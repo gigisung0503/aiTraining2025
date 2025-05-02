@@ -53,7 +53,8 @@ In the next 45 minutes you’ll learn **how a few formatting tricks can turn mes
 #### Try for yourself.
 
 
-<iframe src="data/ERF_incidentManagementSystem.pdf#navpanes=0" width="100%" height="600px"></iframe>
+<iframe src="docs/data/ERF_incidentManagementSystem.pdf" width="100%" height="600px"></iframe>
+
 
 1. Download [this pdf file](https://drive.google.com/file/d/11ZZmkaZbudp4MC-TL64tpqSlZsqYEVos/view?usp=sharing).
 2. Open [ChatGPT website](https://chatgpt.com/).
@@ -257,7 +258,7 @@ following an assessment of country office capacity to manage the emergency durin
 #### 💻 Tables? Use HTML
 
 #### Try for yourself.
-<iframe src="data/ERF_table.pdf#navpanes=0" width="100%" height="600px"></iframe>
+<iframe src="docs/data/ERF_table.pdf" width="100%" height="600px"></iframe>
 
 1. Tell chatgpt to recreate the *Table 2*.
 2. Check if all the elements are included:
