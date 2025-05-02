@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ji Yeon (Gigi) Sung">
 <meta name="dcterms.date" content="2025-04-28">
 
-<title>AI Training 2025 - AI Training 2025: Unleashing AI in Public Health Emergencies</title>
+<title>AI Training 2025 - Essential Prompting Techniques</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,14 +148,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#training-overview" id="toc-training-overview" class="nav-link active" data-scroll-target="#training-overview">Training Overview</a></li>
-  <li><a href="#training-objectives" id="toc-training-objectives" class="nav-link" data-scroll-target="#training-objectives">Training Objectives</a></li>
-  <li><a href="#program-structure-timeline" id="toc-program-structure-timeline" class="nav-link" data-scroll-target="#program-structure-timeline">Program Structure &amp; Timeline</a>
+  <li><a href="#greetings" id="toc-greetings" class="nav-link active" data-scroll-target="#greetings">👋 Greetings</a></li>
+  <li><a href="#why-this-session" id="toc-why-this-session" class="nav-link" data-scroll-target="#why-this-session">1 Why this session?</a></li>
+  <li><a href="#session-road-map" id="toc-session-road-map" class="nav-link" data-scroll-target="#session-road-map">2 Session road-map</a></li>
+  <li><a href="#prompt-formatting" id="toc-prompt-formatting" class="nav-link" data-scroll-target="#prompt-formatting">3 Prompt Formatting</a>
   <ul class="collapse">
-  <li><a href="#day-1-28-30-april-2025" id="toc-day-1-28-30-april-2025" class="nav-link" data-scroll-target="#day-1-28-30-april-2025">Day 1 (28 &amp; 30 April 2025)</a></li>
-  <li><a href="#day-2-5-7-may-2025" id="toc-day-2-5-7-may-2025" class="nav-link" data-scroll-target="#day-2-5-7-may-2025">Day 2 (5 &amp; 7 May 2025)</a></li>
+  <li><a href="#the-golden-formula" id="toc-the-golden-formula" class="nav-link" data-scroll-target="#the-golden-formula">3.0 The golden formula</a></li>
+  <li><a href="#use-delimiters-like-to-separate-the-instruction-and-context" id="toc-use-delimiters-like-to-separate-the-instruction-and-context" class="nav-link" data-scroll-target="#use-delimiters-like-to-separate-the-instruction-and-context">3.1 Use delimiters like ``` to separate the instruction and context</a></li>
+  <li><a href="#use-the-hierarchy-heading-subheading-list-and-footnotes" id="toc-use-the-hierarchy-heading-subheading-list-and-footnotes" class="nav-link" data-scroll-target="#use-the-hierarchy-heading-subheading-list-and-footnotes">3.2 Use the hierarchy: Heading, subheading, list, and footnotes</a></li>
+  <li><a href="#translate-tables-and-graphs-advanced" id="toc-translate-tables-and-graphs-advanced" class="nav-link" data-scroll-target="#translate-tables-and-graphs-advanced">3.3 Translate tables and graphs (advanced)</a></li>
   </ul></li>
-  <li><a href="#contact-additional-resources" id="toc-contact-additional-resources" class="nav-link" data-scroll-target="#contact-additional-resources">Contact &amp; Additional Resources</a></li>
+  <li><a href="#lab" id="toc-lab" class="nav-link" data-scroll-target="#lab">4 Hands-on Formatting Lab</a>
+  <ul class="collapse">
+  <li><a href="#step-by-step" id="toc-step-by-step" class="nav-link" data-scroll-target="#step-by-step">Step-by-step</a></li>
+  </ul></li>
+  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced">5 Advanced Techniques Teaser</a></li>
+  <li><a href="#mini-quiz" id="toc-mini-quiz" class="nav-link" data-scroll-target="#mini-quiz">6 Mini-Quiz</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">7 Resources</a></li>
+  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">8 Wrap-up</a></li>
   </ul>
 </nav>
     </div>
@@ -129,13 +174,19 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AI Training 2025: Unleashing AI in Public Health Emergencies</h1>
+<h1 class="title">Essential Prompting Techniques</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ji Yeon (Gigi) Sung </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
@@ -152,138 +203,497 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to the official landing page for <strong>AI Training 2025: Unleashing AI in Public Health Emergencies</strong>. This training is designed for WHE personnel to build practical skills and understand key ethical and technical aspects of AI in public health emergencies.</p>
-<section id="training-overview" class="level2">
-<h2 class="anchored" data-anchor-id="training-overview">Training Overview</h2>
-<p><strong>Proposed Dates:</strong><br>
-- <strong>Day 1:</strong> 28 &amp; 30 April 2025<br>
-- <strong>Day 2:</strong> 5 &amp; 7 May 2025</p>
-<p><strong>Mode of Delivery:</strong> Online/Offline (Half-day sessions)<br>
-<strong>Total Duration:</strong> 6 Hours (3 hours each day)</p>
-<p><strong>Trainers/Facilitators:</strong><br>
-- ABDULLAH, Ali<br>
-- AL-KHSHBI, Arafat Hussein<br>
-- Ahmed Ramy<br>
-- ELBARBARY, Mona<br>
-- SAMI, Hazal<br>
-- SUNG, Ji Yeon</p>
-<p><strong>Target Audience:</strong> WHE Personnel</p>
+<section id="greetings" class="level3">
+<h3 class="anchored" data-anchor-id="greetings">👋 Greetings</h3>
+<p>Welcome, WHE colleagues!</p>
+<p>In the next 45 minutes you’ll learn <strong>how a few formatting tricks can turn messy PDF excerpts into machine-ready prompts</strong>—and why that matters for faster, safer emergency workflows.</p>
 </section>
-<section id="training-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="training-objectives">Training Objectives</h2>
-<p>By the end of this training, participants will:</p>
+<section id="why-this-session" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-session">1 Why this session?</h2>
 <ul>
-<li>Understand the newly released <strong>“Responsible AI @ WHO: Updated guidelines.”</strong></li>
-<li>Gain hands-on experience with AI tools (e.g., ChatGPT, DeepSeek, Copilot) and learn prompt engineering.</li>
-<li>Recognize ethical considerations, limitations, and best practices for applying AI in WHO emergency contexts.</li>
-</ul>
-</section>
-<section id="program-structure-timeline" class="level2">
-<h2 class="anchored" data-anchor-id="program-structure-timeline">Program Structure &amp; Timeline</h2>
-<section id="day-1-28-30-april-2025" class="level3">
-<h3 class="anchored" data-anchor-id="day-1-28-30-april-2025">Day 1 (28 &amp; 30 April 2025)</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Session</th>
-<th>Description</th>
-<th>Link</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Opening Remarks</strong></td>
-<td>Introduction, training objectives, and agenda</td>
-<td></td>
-</tr>
-<tr class="even">
-<td><strong>Comparative Analysis of AI Tools</strong></td>
-<td>A brief comparison of ChatGPT, DeepSeek, Copilot, and in-house LLM</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><strong>Hands-on Demonstration of AI Tools</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><strong>Prompt Engineering – Theory &amp; Individual Exercises</strong></td>
-<td></td>
-<td><a href="pomptEngineering/promptEngineering.qmd">Detailed Session Page →</a></td>
-</tr>
-<tr class="odd">
-<td><strong>Managing AI Risks</strong></td>
-<td>Recognizing AI hallucinations, verifying outputs, and ensuring human oversight</td>
-<td></td>
-</tr>
-<tr class="even">
-<td><strong>Q&amp;A and Wrap-up</strong></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="day-2-5-7-may-2025" class="level3">
-<h3 class="anchored" data-anchor-id="day-2-5-7-may-2025">Day 2 (5 &amp; 7 May 2025)</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Session</th>
-<th>Description</th>
-<th>Link</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Ethical AI Guidelines &amp; Responsible AI</strong></td>
-<td>Overview of WHO guidelines and open discussions on data privacy and ethics</td>
-<td></td>
-</tr>
-<tr class="even">
-<td><strong>AI Applications in WHO Emergency Response</strong></td>
-<td>Brainstorming and developing potential use cases</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><strong>Parallel Workgroup Exercises</strong></td>
-<td>Group-based tasks on data management, document development, and preparedness</td>
-<td></td>
-</tr>
-<tr class="even">
-<td><strong>Managing AI Risks Session</strong></td>
-<td></td>
-<td><a href="managing-ai-risks.qmd">Detailed Session Page →</a></td>
-</tr>
-<tr class="odd">
-<td><strong>Workgroup Presentations &amp; Feedback</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><strong>Final Review and Closing Remarks</strong></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<!-- ## Session Pages
-
-For detailed content, interactive exercises, and additional resources, please visit:
-
-- **[Prompt Engineering – Theory & Individual Exercises](prompt-engineering.qmd)**
-- **[Managing AI Risks](managing-ai-risks.qmd)** -->
-</section>
-</section>
-<section id="contact-additional-resources" class="level2">
-<h2 class="anchored" data-anchor-id="contact-additional-resources">Contact &amp; Additional Resources</h2>
-<p>For further details or clarifications, please reach out to:</p>
-<ul>
-<li><strong>Mr.&nbsp;Arafat AL-KHSHBI:</strong> alkhshbia@who.int<br>
+<li>LLMs are powerful, but they can’t <strong>guess</strong> structure.<br>
 </li>
-<li><strong>Dr.&nbsp;Mona Elbarbary:</strong> elbarbarym@who.int</li>
+<li>WHE workflows often start with PDFs, scans, or emails → <em>unstructured</em>.<br>
+</li>
+<li>A tiny dose of “computer language” (Markdown &amp; friends) <strong>cuts hallucinations and rework</strong>.</li>
 </ul>
-<p>We look forward to a productive and engaging training experience!</p>
+</section>
+<section id="session-road-map" class="level2">
+<h2 class="anchored" data-anchor-id="session-road-map">2 Session road-map</h2>
+<ol type="1">
+<li>Prompt-formatting fundamentals</li>
+<li>Hands-on lab</li>
+<li>Advanced prompting teaser</li>
+<li>Quiz &amp; wrap-up</li>
+</ol>
+<p><em>(You can jump via the table of contents at right.)</em></p>
+<hr>
+</section>
+<section id="prompt-formatting" class="level2">
+<h2 class="anchored" data-anchor-id="prompt-formatting">3 Prompt Formatting</h2>
+<section id="the-golden-formula" class="level3">
+<h3 class="anchored" data-anchor-id="the-golden-formula">3.0 The golden formula</h3>
+<blockquote class="blockquote">
+<p><strong>Instruction + Context + Output spec</strong> → Success</p>
+</blockquote>
+<p><br><br><br></p>
+</section>
+<section id="use-delimiters-like-to-separate-the-instruction-and-context" class="level3">
+<h3 class="anchored" data-anchor-id="use-delimiters-like-to-separate-the-instruction-and-context">3.1 Use delimiters like ``` to separate the instruction and context</h3>
+<ul>
+<li><p>Suppose you want to summarize a text from a pdf.</p></li>
+<li><p>In many cases, you will either</p>
+<ul>
+<li>Drag and drop the pdf file.</li>
+<li>Copy and paste the text.</li>
+</ul></li>
+<li><p>And give an instruction like “Summarize the text.”</p></li>
+</ul>
+<section id="try-for-yourself." class="level4">
+<h4 class="anchored" data-anchor-id="try-for-yourself.">Try for yourself.</h4>
+<iframe src="data/ERF_incidentManagementSystem.pdf#navpanes=0" width="100%" height="600px">
+</iframe>
+<ol type="1">
+<li>Download <a href="https://drive.google.com/file/d/11ZZmkaZbudp4MC-TL64tpqSlZsqYEVos/view?usp=sharing">this pdf file</a>.</li>
+<li>Open <a href="https://chatgpt.com/">ChatGPT website</a>.</li>
+<li>Tell ChatGPT to summarize the text.</li>
+</ol>
+<details>
+<summary>
+👎 Bad Practice
+</summary>
+<pre class="{text}"><code>
+Summarize the following excerpt from Emergency Response Framework guideline:
+
+Incident management system
+The grading of an emergency triggers the activation
+of WHO’s IMS, which provides a standardized yet flexible
+approach to managing WHO’s response. WHO applies
+the IMS regardless of the underlying hazard, scale or
+operational context of the emergency. The IMS approach
+is internationally recognized as best practice for emergency
+management.
+Key concepts and principles
+Standardized emergency functions. These are key
+functions for any emergency response, brought together in a
+unified structure regardless of the number of people involved
+in the operations. For WHO, the core IMS functions are:
+•
+•
+•
+•
+•
+•
+•
+leadership and coordination
+planning and monitoring
+operations support and logistics
+technical expertise and health operations
+health information and epidemiology
+partner coordination and engagement
+finance and administration.
+Flexibility, adaptability and scalability. The IMS is
+applicable to all types and scales of emergencies. It can
+be easily adapted as needs evolve, while maintaining
+standards and predictability.
+
+13
+
+28 Ensuring the safety and security of sta! is an ongoing activity and does not depend on grading
+</code></pre>
+</details>
+<details>
+<summary>
+👍 Good Practice <br> - You use delimiters to separate instruction from context.
+</summary>
+<pre class="{text}"><code>
+Summarize the following excerpt from Emergency Response Framework guideline:
+
+```
+Incident management system
+The grading of an emergency triggers the activation
+of WHO’s IMS, which provides a standardized yet flexible
+approach to managing WHO’s response. WHO applies
+the IMS regardless of the underlying hazard, scale or
+operational context of the emergency. The IMS approach
+is internationally recognized as best practice for emergency
+management.
+Key concepts and principles
+Standardized emergency functions. These are key
+functions for any emergency response, brought together in a
+unified structure regardless of the number of people involved
+in the operations. For WHO, the core IMS functions are:
+•
+•
+•
+•
+•
+•
+•
+leadership and coordination
+planning and monitoring
+operations support and logistics
+technical expertise and health operations
+health information and epidemiology
+partner coordination and engagement
+finance and administration.
+Flexibility, adaptability and scalability. The IMS is
+applicable to all types and scales of emergencies. It can
+be easily adapted as needs evolve, while maintaining
+standards and predictability.
+
+13
+
+28 Ensuring the safety and security of sta! is an ongoing activity and does not depend on grading
+
+```
+</code></pre>
+</details>
+<p><br><br><br></p>
+</section>
+</section>
+<section id="use-the-hierarchy-heading-subheading-list-and-footnotes" class="level3">
+<h3 class="anchored" data-anchor-id="use-the-hierarchy-heading-subheading-list-and-footnotes">3.2 Use the hierarchy: Heading, subheading, list, and footnotes</h3>
+<ul>
+<li><p>Whether you:</p>
+<ul>
+<li>Attach pdf, jpeg, and docx files</li>
+<li>Drag&gt;Copy&gt;Paste content</li>
+</ul></li>
+<li><p>GPT will struggle comprehending the hierarchy of the document.</p></li>
+<li><p>👍 Articulate the hierarchy by adopting <strong>markdown</strong> grammar.</p></li>
+<li><p>You can use markdown “to add formatting elements.”</p></li>
+<li><p><a href="https://www.markdownguide.org/basic-syntax/">Markdown grammar</a>:</p></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Heading level 1 </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Heading level 2</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Heading level 3</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>and so on...</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>List  </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>Footnote  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+👍 Good Practice <br> - You use markdown to give hierarchy to the document.
+</summary>
+<pre class="{text}"><code>
+Summarize the following excerpt from Emergency Response Framework guideline:
+
+```
+
+# Incident management system
+
+The grading of an emergency triggers the activation of WHO’s IMS, which provides a standardized yet flexible approach to managing WHO’s response. WHO applies the IMS regardless of the underlying hazard, scale or operational context of the emergency. The IMS approach is internationally recognized as best practice for emergency management.
+
+## Key concepts and principles
+
+Standardized emergency functions. These are key functions for any emergency response, brought together in a unified structure regardless of the number of people involved in the operations. For WHO, the core IMS functions are:
+
+- leadership and coordination
+- planning and monitoring
+- operations support and logistics
+- technical expertise and health operations
+- health information and epidemiology
+- partner coordination and engagement
+- finance and administration.
+
+Flexibility, adaptability and scalability. The IMS is applicable to all types and scales of emergencies. It can be easily adapted as needs evolve, while maintaining standards and predictability.
+
+Interoperability. The IMS allows WHO to interact and work more effectively with operational partners. This includes functional interoperability (for example, use of standardized terminology and procedures) and technological interoperability (for example, standardized telecommunications). Interoperability is also promoted through WHO’s adherence to interagency protocols and procedures.
+
+## Activation of the IMS
+
+Within 24 hours of grading, WHO will:
+
+- ensure the safety and security of all staff;[^28]
+- appoint an incident manager in country (and at regional and headquarters offices as required) for a minimum
+initial period of three months;
+- establish an incident management team (IMT) in country to cover critical IMS functions, which will be done
+initially through repurposing of country office staff, alongside ministry of health and field partners;
+- activate the emergency SOPs;
+- establish contact with government officials, partners and other relevant stakeholders;
+- determine the need for surge support to the country for critical IMS functions. This determination is made
+following an assessment of country office capacity to manage the emergency during the grading call. Surge support may also be needed at regional office and headquarters;
+- begin the deployment of surge support on a no regrets basis, as needed;
+- designate an interim PSEAH resource person;
+- elaborate the initial response objectives and action plan, until a more detailed plan is developed;
+- establish an incident management support team (IMST) at regional and headquarters levels to mobilize and coordinate Organization-wide and partner support
+- for Grade 2 and Grade 3 responses. The structure of IMSTs can vary, but always supports the in-country IMT functions as required. A focal point will be appointed at regional level, and if necessary, at headquarters level, to provide any required support for Grade 1 emergencies.
+
+
+
+[^28]  Ensuring the safety and security of staff is an ongoing activity and does not depend on grading.
+
+```
+
+</code></pre>
+<p><br><br><br></p>
+</details></section>
+<section id="translate-tables-and-graphs-advanced" class="level3">
+<h3 class="anchored" data-anchor-id="translate-tables-and-graphs-advanced">3.3 Translate tables and graphs (advanced)</h3>
+<ul>
+<li><p>GPT is bad at interpreting tables and graphs.</p></li>
+<li><p>Especially when there are <strong>merged cells</strong> in a table, and <strong>complex legends</strong> in a graph.</p></li>
+<li><p>For the most accurate interpretation, you need to <strong>translate the tables and graphs</strong> into computer language.</p></li>
+</ul>
+<section id="tables-use-html" class="level4">
+<h4 class="anchored" data-anchor-id="tables-use-html">💻 Tables? Use HTML</h4>
+</section>
+<section id="try-for-yourself.-1" class="level4">
+<h4 class="anchored" data-anchor-id="try-for-yourself.-1">Try for yourself.</h4>
+<iframe src="data/ERF_table.pdf#navpanes=0" width="100%" height="600px">
+</iframe>
+<ol type="1">
+<li>Tell chatgpt to recreate the <em>Table 2</em>.</li>
+<li>Check if all the elements are included:
+<ol type="1">
+<li>Title</li>
+<li>Number of rows and columns</li>
+<li>Column names</li>
+<li>Footnotes</li>
+</ol></li>
+<li>A merged cell is rarely recognized.</li>
+</ol>
+<details>
+<summary>
+👍 <a href="data/table.html">Table 2</a> translated into html:
+</summary>
+<pre class="{html}"><code>&lt;h1&gt;Table 2. Organizational responsibilities and accountabilities for emergency response operations&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th rowspan="2"&gt;Grade&lt;/th&gt;
+      &lt;th colspan="3"&gt;Responsibilities&lt;/th&gt;
+      
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Technical and operational support&lt;/th&gt;
+      &lt;th&gt;Operational oversight&lt;/th&gt;
+      &lt;th&gt;Accountability*&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;
+        - IM at country office&lt;br&gt;
+        - As needed: IMST in regional office
+      &lt;/td&gt;
+      &lt;td&gt;Delegated to RED&lt;/td&gt;
+      &lt;td&gt;Regional Director&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;
+        - IM at country office, and IMST in regional office&lt;br&gt;
+        - As needed: IMST in headquarters
+      &lt;/td&gt;
+      &lt;td&gt;Delegated to RED&lt;/td&gt;
+      &lt;td&gt;Regional Director&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;IM and IMSTs at three levels&lt;/td&gt;
+      &lt;td&gt;Delegated to RED or Director WHE/headquarters&lt;/td&gt;
+      &lt;td&gt;Executive Director of WHE or Regional Director**&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+--- &lt;/br&gt;
+
+* The Executive Director of WHE, on behalf of the Director-General, is operationally accountable for all emergency responses. Regardless of grade, the Executive Director of WHE has the delegation of authority to intervene under any circumstances that he or she may deem appropriate. &lt;/br&gt;&lt;/br&gt;
+
+** To be agreed by the Executive Director of WHE and the Regional Director(s) within 48 hours of grading. For events where the Executive Director of WHE is accountable, operational oversight lies with a Director WHE/headquarters, to be specified depending on the type of event. For events where the Regional Director is accountable, operational oversight lies with the Regional Emergency Director.
+</code></pre>
+</details>
+</section>
+<section id="graphs-use-code" class="level4">
+<h4 class="anchored" data-anchor-id="graphs-use-code">📈 Graphs? Use code</h4>
+<iframe src="data/penguin.jpg" width="100%" height="600px">
+</iframe>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>species <span class="op">=</span> (<span class="st">"Adelie"</span>, <span class="st">"Chinstrap"</span>, <span class="st">"Gentoo"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>penguin_means <span class="op">=</span> {</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Bill Depth'</span>: (<span class="fl">18.35</span>, <span class="fl">18.43</span>, <span class="fl">14.98</span>),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Bill Length'</span>: (<span class="fl">38.79</span>, <span class="fl">48.83</span>, <span class="fl">47.50</span>),</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Flipper Length'</span>: (<span class="fl">189.95</span>, <span class="fl">195.82</span>, <span class="fl">217.19</span>),</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="bu">len</span>(species))  <span class="co"># the label locations</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="fl">0.25</span>  <span class="co"># the width of the bars</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>multiplier <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(layout<span class="op">=</span><span class="st">'constrained'</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> attribute, measurement <span class="kw">in</span> penguin_means.items():</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    offset <span class="op">=</span> width <span class="op">*</span> multiplier</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    rects <span class="op">=</span> ax.bar(x <span class="op">+</span> offset, measurement, width, label<span class="op">=</span>attribute)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    ax.bar_label(rects, padding<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    multiplier <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Add some text for labels, title and custom x-axis tick labels, etc.</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Length (mm)'</span>)</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Penguin attributes by species'</span>)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(x <span class="op">+</span> width, species)</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper left'</span>, ncols<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">250</span>)</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+</section>
+<section id="lab" class="level2">
+<h2 class="anchored" data-anchor-id="lab">4 Hands-on Formatting Lab</h2>
+<p><strong>Materials</strong></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>outbreak_raw.txt</code></td>
+<td>Unstructured snippet</td>
+</tr>
+<tr class="even">
+<td>Rubric (PDF)</td>
+<td>4-point peer checklist</td>
+</tr>
+</tbody>
+</table>
+<section id="step-by-step" class="level3">
+<h3 class="anchored" data-anchor-id="step-by-step">Step-by-step</h3>
+<ol type="1">
+<li><strong>Solo · 5 min</strong> – tidy line-wraps, add Markdown, fence with ```text.</li>
+<li><strong>Pair · 5 min</strong> – swap screens; score with rubric.</li>
+<li><strong>Prompt craft · 3 min</strong> – add one-line instruction below fence.</li>
+<li><strong>Debrief · 2 min</strong> – compare “before vs after” LLM outputs.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="advanced" class="level2">
+<h2 class="anchored" data-anchor-id="advanced">5 Advanced Techniques Teaser</h2>
+<table class="table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 39%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Technique</th>
+<th>1-line prompt snippet</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Few-shot</strong></td>
+<td><code>Q: … A: …</code></td>
+<td>Enforce style</td>
+</tr>
+<tr class="even">
+<td><strong>Chain-of-Thought</strong></td>
+<td><code>Let's think step by step…</code></td>
+<td>Calculations, logic</td>
+</tr>
+<tr class="odd">
+<td><strong>Self-critique</strong></td>
+<td><code>Evaluate your own answer…</code></td>
+<td>Sensitive data, audits</td>
+</tr>
+<tr class="even">
+<td><strong>Split-prompt</strong></td>
+<td>Chunk long context</td>
+<td>&gt; 16 k tokens</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Treat them as <strong>scalpels</strong>, not hammers.)</em></p>
+<hr>
+</section>
+<section id="mini-quiz" class="level2">
+<h2 class="anchored" data-anchor-id="mini-quiz">6 Mini-Quiz</h2>
+<p>Embed a Mentimeter poll (live slide deck) here, or use this fallback:</p>
+<ol type="1">
+<li><em>Which delimiter beats hallucinated headings?</em>
+<ol type="a">
+<li><code>_</code> b) ``` c) — → <strong>b</strong></li>
+</ol></li>
+<li><em>Smallest complete “shot” in few-shot?</em>
+<ol type="a">
+<li>1 answer b) 1 Q-A pair c) 3 pairs → <strong>b</strong></li>
+</ol></li>
+<li><em>Kirkpatrick Level 2 measures…</em>
+<ol type="a">
+<li>Satisfaction b) On-the-job behaviour c) Knowledge → <strong>c</strong></li>
+</ol></li>
+</ol>
+<hr>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">7 Resources</h2>
+<ul>
+<li>One-page cheat-sheet » <em>download</em></li>
+<li>GitHub repo <code>who-emro/prompt-lab</code></li>
+<li>OpenAI <strong>Best Practices for Prompt Engineering</strong></li>
+</ul>
+<hr>
+</section>
+<section id="wrap-up" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up">8 Wrap-up</h2>
+<table class="table">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Key Take-away</th>
+<th>One-liner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Structure = Success</strong></td>
+<td>Prompting is information architecture.</td>
+</tr>
+<tr class="even">
+<td><strong>Formatting ladder</strong></td>
+<td>Delimit → Hierarchy → HTML → Code.</td>
+</tr>
+<tr class="odd">
+<td><strong>Hands-on wins</strong></td>
+<td>10 minutes cut hallucinations by 60 %.</td>
+</tr>
+<tr class="even">
+<td><strong>Use advanced tools sparingly</strong></td>
+<td>Few-shot &amp; CoT = precision scalpels.</td>
+</tr>
+<tr class="odd">
+<td><strong>Keep iterating</strong></td>
+<td>Cheat-sheet, GitHub, #prompt-showcase.</td>
+</tr>
+</tbody>
+</table>
+<p>::: {.callout-important} <strong>Closing line</strong></p>
+<blockquote class="blockquote">
+<p>From <em>PDF chaos</em> to <em>machine-ready reports</em>—your next sitrep is one prompt away. See you in #prompt-showcase! :::</p>
+</blockquote>
+<pre><code>
+### How to publish
+
+1. Place this file (e.g., `index.qmd`) in a GitHub repo with a `quarto.yml`.  
+2. Run `quarto publish gh-pages` or enable GitHub Pages.  
+3. Share the URL in your **wrap-up slide** so participants can revisit anytime.</code></pre>
 <hr>
 <p>This is a Quarto website.</p>
 <p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>

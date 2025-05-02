@@ -1,78 +1,452 @@
 ---
-title: "AI Training 2025: Unleashing AI in Public Health Emergencies"
+title: "Essential Prompting Techniques"
+author: "Ji Yeon (Gigi) Sung" 
 date: "2025-04-28"
 ---
 
+### 👋 Greetings
+
+Welcome, WHE colleagues!  
+
+In the next 45 minutes you’ll learn **how a few formatting tricks can turn messy PDF excerpts into machine-ready prompts**—and why that matters for faster, safer emergency workflows.
+
+## 1  Why this session?
+
+* LLMs are powerful, but they can’t **guess** structure.  
+* WHE workflows often start with PDFs, scans, or emails → *unstructured*.  
+* A tiny dose of “computer language” (Markdown & friends) **cuts hallucinations and rework**.
 
 
-Welcome to the official landing page for **AI Training 2025: Unleashing AI in Public Health Emergencies**. This training is designed for WHE personnel to build practical skills and understand key ethical and technical aspects of AI in public health emergencies.
 
-## Training Overview
+## 2  Session road-map
 
-**Proposed Dates:**  
-- **Day 1:** 28 & 30 April 2025  
-- **Day 2:** 5 & 7 May 2025
+1. Prompt-formatting fundamentals
+2. Hands-on lab
+3. Advanced prompting teaser
+4. Quiz & wrap-up
 
-**Mode of Delivery:** Online/Offline (Half-day sessions)  
-**Total Duration:** 6 Hours (3 hours each day)
+*(You can jump via the table of contents at right.)*
 
-**Trainers/Facilitators:**  
-- ABDULLAH, Ali  
-- AL-KHSHBI, Arafat Hussein  
-- Ahmed Ramy  
-- ELBARBARY, Mona  
-- SAMI, Hazal  
-- SUNG, Ji Yeon
+---
 
-**Target Audience:** WHE Personnel
-
-## Training Objectives
-
-By the end of this training, participants will:
-
-- Understand the newly released **“Responsible AI @ WHO: Updated guidelines.”**
-- Gain hands-on experience with AI tools (e.g., ChatGPT, DeepSeek, Copilot) and learn prompt engineering.
-- Recognize ethical considerations, limitations, and best practices for applying AI in WHO emergency contexts.
-
-## Program Structure & Timeline
-
-### Day 1 (28 & 30 April 2025)
-| Session                                                 | Description                                                                               | Link                                                            |
-|---------------------------------------------------------|-------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
-| **Opening Remarks**                                     | Introduction, training objectives, and agenda                                             |                                                                 |
-| **Comparative Analysis of AI Tools**                    | A brief comparison of ChatGPT, DeepSeek, Copilot, and in-house LLM                          |                                                                 |
-| **Hands-on Demonstration of AI Tools**                  |                                                                                           |                                                                 |
-| **Prompt Engineering – Theory & Individual Exercises**  |                                                                                           | [Detailed Session Page →](pomptEngineering/promptEngineering.qmd)|
-| **Managing AI Risks**                                   | Recognizing AI hallucinations, verifying outputs, and ensuring human oversight              |                                                                 |
-| **Q&A and Wrap-up**                                     |                                                                                           |                                                                 |
+## 3  Prompt Formatting  
 
 
-### Day 2 (5 & 7 May 2025)
-| Session                                         | Description                                                                               | Link                                                           |
-|-------------------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| **Ethical AI Guidelines & Responsible AI**      | Overview of WHO guidelines and open discussions on data privacy and ethics                  |                                                                |
-| **AI Applications in WHO Emergency Response**   | Brainstorming and developing potential use cases                                          |                                                                |
-| **Parallel Workgroup Exercises**                | Group-based tasks on data management, document development, and preparedness                |                                                                |
-| **Managing AI Risks Session**                   |                                                                                           | [Detailed Session Page →](managing-ai-risks.qmd)               |
-| **Workgroup Presentations & Feedback**          |                                                                                           |                                                                |
-| **Final Review and Closing Remarks**            |                                                                                           |                                                                |
+### 3.0  The golden formula
+
+> **Instruction + Context + Output spec**   →   Success
 
 
-<!-- ## Session Pages
+</br></br></br>
 
-For detailed content, interactive exercises, and additional resources, please visit:
+### 3.1  Use delimiters like ``` to separate the instruction and context
 
-- **[Prompt Engineering – Theory & Individual Exercises](prompt-engineering.qmd)**
-- **[Managing AI Risks](managing-ai-risks.qmd)** -->
+- Suppose you want to summarize a text from a pdf.
 
-## Contact & Additional Resources
+- In many cases, you will either
+    - Drag and drop the pdf file.
+    - Copy and paste the text. 
+- And give an instruction like "Summarize the text."
 
-For further details or clarifications, please reach out to:
 
-- **Mr. Arafat AL-KHSHBI:** alkhshbia@who.int  
-- **Dr. Mona Elbarbary:** elbarbarym@who.int
 
-We look forward to a productive and engaging training experience!
+#### Try for yourself.
+
+
+<iframe src="data/ERF_incidentManagementSystem.pdf#navpanes=0" width="100%" height="600px"></iframe>
+
+1. Download [this pdf file](https://drive.google.com/file/d/11ZZmkaZbudp4MC-TL64tpqSlZsqYEVos/view?usp=sharing).
+2. Open [ChatGPT website](https://chatgpt.com/).
+3. Tell ChatGPT to summarize the text.
+
+<details>
+<summary>👎 Bad Practice</summary>
+```{text}
+
+Summarize the following excerpt from Emergency Response Framework guideline:
+
+Incident management system
+The grading of an emergency triggers the activation
+of WHO’s IMS, which provides a standardized yet flexible
+approach to managing WHO’s response. WHO applies
+the IMS regardless of the underlying hazard, scale or
+operational context of the emergency. The IMS approach
+is internationally recognized as best practice for emergency
+management.
+Key concepts and principles
+Standardized emergency functions. These are key
+functions for any emergency response, brought together in a
+unified structure regardless of the number of people involved
+in the operations. For WHO, the core IMS functions are:
+•
+•
+•
+•
+•
+•
+•
+leadership and coordination
+planning and monitoring
+operations support and logistics
+technical expertise and health operations
+health information and epidemiology
+partner coordination and engagement
+finance and administration.
+Flexibility, adaptability and scalability. The IMS is
+applicable to all types and scales of emergencies. It can
+be easily adapted as needs evolve, while maintaining
+standards and predictability.
+
+13
+
+28 Ensuring the safety and security of sta! is an ongoing activity and does not depend on grading
+
+```
+</details>
+
+
+<details>
+<summary>👍 Good Practice </br>
+- You use delimiters to separate instruction from context.
+</summary>
+````{text}
+
+Summarize the following excerpt from Emergency Response Framework guideline:
+
+```
+Incident management system
+The grading of an emergency triggers the activation
+of WHO’s IMS, which provides a standardized yet flexible
+approach to managing WHO’s response. WHO applies
+the IMS regardless of the underlying hazard, scale or
+operational context of the emergency. The IMS approach
+is internationally recognized as best practice for emergency
+management.
+Key concepts and principles
+Standardized emergency functions. These are key
+functions for any emergency response, brought together in a
+unified structure regardless of the number of people involved
+in the operations. For WHO, the core IMS functions are:
+•
+•
+•
+•
+•
+•
+•
+leadership and coordination
+planning and monitoring
+operations support and logistics
+technical expertise and health operations
+health information and epidemiology
+partner coordination and engagement
+finance and administration.
+Flexibility, adaptability and scalability. The IMS is
+applicable to all types and scales of emergencies. It can
+be easily adapted as needs evolve, while maintaining
+standards and predictability.
+
+13
+
+28 Ensuring the safety and security of sta! is an ongoing activity and does not depend on grading
+
+```
+
+````
+</details>
+
+
+</br></br></br>
+
+### 3.2  Use the hierarchy: Heading, subheading, list, and footnotes
+
+- Whether you:
+    - Attach pdf, jpeg, and docx files
+    - Drag>Copy>Paste content
+- GPT will struggle comprehending the hierarchy of the document.
+- 👍 Articulate the hierarchy by adopting **markdown** grammar. 
+
+- You can use markdown "to add formatting elements." 
+- [Markdown grammar](https://www.markdownguide.org/basic-syntax/):
+
+```markdown
+# Heading level 1 
+## Heading level 2
+### Heading level 3
+and so on...
+
+- List  
+
+[^1]: Footnote  
+```
+
+
+<details>
+<summary>👍 Good Practice </br>
+- You use markdown to give hierarchy to the document.
+</summary>
+````{text}
+
+Summarize the following excerpt from Emergency Response Framework guideline:
+
+```
+
+# Incident management system
+
+The grading of an emergency triggers the activation of WHO’s IMS, which provides a standardized yet flexible approach to managing WHO’s response. WHO applies the IMS regardless of the underlying hazard, scale or operational context of the emergency. The IMS approach is internationally recognized as best practice for emergency management.
+
+## Key concepts and principles
+
+Standardized emergency functions. These are key functions for any emergency response, brought together in a unified structure regardless of the number of people involved in the operations. For WHO, the core IMS functions are:
+
+- leadership and coordination
+- planning and monitoring
+- operations support and logistics
+- technical expertise and health operations
+- health information and epidemiology
+- partner coordination and engagement
+- finance and administration.
+
+Flexibility, adaptability and scalability. The IMS is applicable to all types and scales of emergencies. It can be easily adapted as needs evolve, while maintaining standards and predictability.
+
+Interoperability. The IMS allows WHO to interact and work more effectively with operational partners. This includes functional interoperability (for example, use of standardized terminology and procedures) and technological interoperability (for example, standardized telecommunications). Interoperability is also promoted through WHO’s adherence to interagency protocols and procedures.
+
+## Activation of the IMS
+
+Within 24 hours of grading, WHO will:
+
+- ensure the safety and security of all staff;[^28]
+- appoint an incident manager in country (and at regional and headquarters offices as required) for a minimum
+initial period of three months;
+- establish an incident management team (IMT) in country to cover critical IMS functions, which will be done
+initially through repurposing of country office staff, alongside ministry of health and field partners;
+- activate the emergency SOPs;
+- establish contact with government officials, partners and other relevant stakeholders;
+- determine the need for surge support to the country for critical IMS functions. This determination is made
+following an assessment of country office capacity to manage the emergency during the grading call. Surge support may also be needed at regional office and headquarters;
+- begin the deployment of surge support on a no regrets basis, as needed;
+- designate an interim PSEAH resource person;
+- elaborate the initial response objectives and action plan, until a more detailed plan is developed;
+- establish an incident management support team (IMST) at regional and headquarters levels to mobilize and coordinate Organization-wide and partner support
+- for Grade 2 and Grade 3 responses. The structure of IMSTs can vary, but always supports the in-country IMT functions as required. A focal point will be appointed at regional level, and if necessary, at headquarters level, to provide any required support for Grade 1 emergencies.
+
+
+
+[^28]  Ensuring the safety and security of staff is an ongoing activity and does not depend on grading.
+
+```
+
+
+````
+
+
+</br></br></br>
+
+
+
+### 3.3 Translate tables and graphs (advanced)
+
+- GPT is bad at interpreting tables and graphs. 
+
+- Especially when there are **merged cells** in a table, and **complex legends** in a graph. 
+  
+- For the most accurate interpretation, you need to **translate the tables and graphs** into computer language.
+
+
+
+#### 💻 Tables? Use HTML
+
+#### Try for yourself.
+<iframe src="data/ERF_table.pdf#navpanes=0" width="100%" height="600px"></iframe>
+
+1. Tell chatgpt to recreate the *Table 2*.
+2. Check if all the elements are included:
+   1. Title
+   2. Number of rows and columns
+   3. Column names
+   4. Footnotes
+3. A merged cell is rarely recognized.
+
+<details>
+<summary> 👍 [Table 2](data/table.html) translated into html:</summary>
+```{html}
+<h1>Table 2. Organizational responsibilities and accountabilities for emergency response operations</h1>
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Grade</th>
+      <th colspan="3">Responsibilities</th>
+      
+    </tr>
+    <tr>
+      <th>Technical and operational support</th>
+      <th>Operational oversight</th>
+      <th>Accountability*</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>
+        - IM at country office<br>
+        - As needed: IMST in regional office
+      </td>
+      <td>Delegated to RED</td>
+      <td>Regional Director</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>
+        - IM at country office, and IMST in regional office<br>
+        - As needed: IMST in headquarters
+      </td>
+      <td>Delegated to RED</td>
+      <td>Regional Director</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>IM and IMSTs at three levels</td>
+      <td>Delegated to RED or Director WHE/headquarters</td>
+      <td>Executive Director of WHE or Regional Director**</td>
+    </tr>
+  </tbody>
+</table>
+
+--- </br>
+
+* The Executive Director of WHE, on behalf of the Director-General, is operationally accountable for all emergency responses. Regardless of grade, the Executive Director of WHE has the delegation of authority to intervene under any circumstances that he or she may deem appropriate. </br></br>
+
+** To be agreed by the Executive Director of WHE and the Regional Director(s) within 48 hours of grading. For events where the Executive Director of WHE is accountable, operational oversight lies with a Director WHE/headquarters, to be specified depending on the type of event. For events where the Regional Director is accountable, operational oversight lies with the Regional Emergency Director.
+
+```
+</details>
+
+
+
+
+#### 📈 Graphs? Use code
+
+<iframe src="data/penguin.jpg" width="100%" height="600px"></iframe>
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+species = ("Adelie", "Chinstrap", "Gentoo")
+penguin_means = {
+    'Bill Depth': (18.35, 18.43, 14.98),
+    'Bill Length': (38.79, 48.83, 47.50),
+    'Flipper Length': (189.95, 195.82, 217.19),
+}
+
+x = np.arange(len(species))  # the label locations
+width = 0.25  # the width of the bars
+multiplier = 0
+
+fig, ax = plt.subplots(layout='constrained')
+
+for attribute, measurement in penguin_means.items():
+    offset = width * multiplier
+    rects = ax.bar(x + offset, measurement, width, label=attribute)
+    ax.bar_label(rects, padding=3)
+    multiplier += 1
+
+# Add some text for labels, title and custom x-axis tick labels, etc.
+ax.set_ylabel('Length (mm)')
+ax.set_title('Penguin attributes by species')
+ax.set_xticks(x + width, species)
+ax.legend(loc='upper left', ncols=3)
+ax.set_ylim(0, 250)
+
+plt.show()
+```
+
+
+
+---
+
+## 4  Hands-on Formatting Lab  {#lab}
+
+
+**Materials**
+
+| File               | Purpose                |
+| ------------------ | ---------------------- |
+| `outbreak_raw.txt` | Unstructured snippet   |
+| Rubric (PDF)       | 4-point peer checklist |
+
+### Step-by-step
+
+1. **Solo · 5 min** – tidy line-wraps, add Markdown, fence with \`\`\`text.
+2. **Pair · 5 min** – swap screens; score with rubric.
+3. **Prompt craft · 3 min** – add one-line instruction below fence.
+4. **Debrief · 2 min** – compare “before vs after” LLM outputs.
+
+---
+
+## 5  Advanced Techniques Teaser  {#advanced}
+
+| Technique            | 1-line prompt snippet       | When to use            |
+| -------------------- | --------------------------- | ---------------------- |
+| **Few-shot**         | `Q: … A: …`                 | Enforce style          |
+| **Chain-of-Thought** | `Let's think step by step…` | Calculations, logic    |
+| **Self-critique**    | `Evaluate your own answer…` | Sensitive data, audits |
+| **Split-prompt**     | Chunk long context          | > 16 k tokens          |
+
+*(Treat them as **scalpels**, not hammers.)*
+
+---
+
+## 6  Mini-Quiz
+
+Embed a Mentimeter poll (live slide deck) here, or use this fallback:
+
+1. *Which delimiter beats hallucinated headings?*
+   a) `_`  b) \`\`\`  c) —   → **b**
+
+2. *Smallest complete “shot” in few-shot?*
+   a) 1 answer  b) 1 Q-A pair   c) 3 pairs   → **b**
+
+3. *Kirkpatrick Level 2 measures…*
+   a) Satisfaction   b) On-the-job behaviour   c) Knowledge   → **c**
+
+---
+
+## 7  Resources
+
+* One-page cheat-sheet » *download*
+* GitHub repo `who-emro/prompt-lab`
+* OpenAI **Best Practices for Prompt Engineering**
+
+---
+
+## 8  Wrap-up  {#wrap-up}
+
+| Key Take-away                    | One-liner                              |
+| -------------------------------- | -------------------------------------- |
+| **Structure = Success**          | Prompting is information architecture. |
+| **Formatting ladder**            | Delimit → Hierarchy → HTML → Code.     |
+| **Hands-on wins**                | 10 minutes cut hallucinations by 60 %. |
+| **Use advanced tools sparingly** | Few-shot & CoT = precision scalpels.   |
+| **Keep iterating**               | Cheat-sheet, GitHub, #prompt-showcase. |
+
+\::: {.callout-important}
+**Closing line**
+
+> From *PDF chaos* to *machine-ready reports*—your next sitrep is one prompt away.
+> See you in #prompt-showcase!
+> \:::
+
+```
+
+### How to publish
+
+1. Place this file (e.g., `index.qmd`) in a GitHub repo with a `quarto.yml`.  
+2. Run `quarto publish gh-pages` or enable GitHub Pages.  
+3. Share the URL in your **wrap-up slide** so participants can revisit anytime.
+```
+
+
 
 
 
