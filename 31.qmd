@@ -1,0 +1,129 @@
+---
+title: "3.1  Use delimiters like ``` to separate the instruction and context"
+author: "Ji Yeon (Gigi) Sung" 
+date: "2025-04-28"
+---
+
+- Suppose you want to summarize a text from a pdf.
+
+- In many cases, you will either
+    - Drag and drop the pdf file.
+    - Copy and paste the text. 
+- And give an instruction like "Summarize the text."
+
+
+
+#### Try for yourself.
+
+{{< pdf data/ERF_incidentManagementSystem.pdf#navspan=0 width=100% height=800 >}}
+
+
+1. Download [this pdf file](https://drive.google.com/file/d/11ZZmkaZbudp4MC-TL64tpqSlZsqYEVos/view?usp=sharing).
+2. Open [ChatGPT website](https://chatgpt.com/).
+3. Tell ChatGPT to summarize the text.
+
+</br></br></br>
+
+
+
+
+<details>
+<summary>👎 Bad Practice</summary>
+
+- You do not separate instruction from context.
+
+```markdown
+Summarize the following excerpt from Emergency Response Framework guideline:
+
+Incident management system
+The grading of an emergency triggers the activation
+of WHO’s IMS, which provides a standardized yet flexible
+approach to managing WHO’s response. WHO applies
+the IMS regardless of the underlying hazard, scale or
+operational context of the emergency. The IMS approach
+is internationally recognized as best practice for emergency
+management.
+Key concepts and principles
+Standardized emergency functions. These are key
+functions for any emergency response, brought together in a
+unified structure regardless of the number of people involved
+in the operations. For WHO, the core IMS functions are:
+•
+•
+•
+•
+•
+•
+•
+leadership and coordination
+planning and monitoring
+operations support and logistics
+technical expertise and health operations
+health information and epidemiology
+partner coordination and engagement
+finance and administration.
+Flexibility, adaptability and scalability. The IMS is
+applicable to all types and scales of emergencies. It can
+be easily adapted as needs evolve, while maintaining
+standards and predictability.
+
+13
+
+28 Ensuring the safety and security of sta! is an ongoing activity and does not depend on grading
+
+```
+</details>
+
+</br>
+
+
+<details>
+<summary>👍 Good Practice</summary>
+- You use delimiters to separate instruction from context.
+
+````markdown
+
+Summarize the following excerpt from Emergency Response Framework guideline:
+
+```
+Incident management system
+The grading of an emergency triggers the activation
+of WHO’s IMS, which provides a standardized yet flexible
+approach to managing WHO’s response. WHO applies
+the IMS regardless of the underlying hazard, scale or
+operational context of the emergency. The IMS approach
+is internationally recognized as best practice for emergency
+management.
+Key concepts and principles
+Standardized emergency functions. These are key
+functions for any emergency response, brought together in a
+unified structure regardless of the number of people involved
+in the operations. For WHO, the core IMS functions are:
+•
+•
+•
+•
+•
+•
+•
+leadership and coordination
+planning and monitoring
+operations support and logistics
+technical expertise and health operations
+health information and epidemiology
+partner coordination and engagement
+finance and administration.
+Flexibility, adaptability and scalability. The IMS is
+applicable to all types and scales of emergencies. It can
+be easily adapted as needs evolve, while maintaining
+standards and predictability.
+
+13
+
+28 Ensuring the safety and security of sta! is an ongoing activity and does not depend on grading
+
+```
+
+````
+
+</details>

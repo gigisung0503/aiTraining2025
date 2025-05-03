@@ -5,11 +5,11 @@ project:
     port: 3333
 
 website:
-  title: "AI Training 2025"
+  title: "Essential Prompting Techniques"
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: Main
       # - about.qmd
       - href: pretraining.qmd
         text: Pretraining

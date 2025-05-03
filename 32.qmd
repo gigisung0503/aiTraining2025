@@ -1,0 +1,94 @@
+---
+title: "3.2  Use the hierarchy: Heading, subheading, list, and footnotes"
+author: "Ji Yeon (Gigi) Sung" 
+date: "2025-04-28"
+---
+
+- When providing context, you will either:
+    - Attach pdf, jpeg, and docx files
+    - Drag>Copy>Paste content
+- GPT will struggle comprehending the hierarchy of the document.
+- 👍 Articulate the hierarchy by adopting **markdown** grammar. 
+
+- You can use markdown "to add formatting elements." 
+- [Markdown grammar](https://www.markdownguide.org/basic-syntax/):
+
+```markdown
+# Heading level 1 
+## Heading level 2
+### Heading level 3
+and so on...
+
+- List  
+
+[^1]: Footnote  
+```
+
+#### Try for yourself.
+
+{{< pdf data/ERF_incidentManagementSystem.pdf#navspan=0 width=100% height=800 >}}
+
+1. Copy and paste the text to Word or texteditor.
+2. Clean the text.
+3. Apply markdown syntax.
+
+<details>
+<summary>👍 Good Practice</summary>
+
+- You use markdown to give hierarchy to the document.
+- You use # to indicate heading levels.
+- You use - for lists.
+- You use [^28] for footnote.
+
+````markdown
+Summarize the following excerpt from Emergency Response Framework guideline:
+
+```
+
+# Incident management system
+
+The grading of an emergency triggers the activation of WHO’s IMS, which provides a standardized yet flexible approach to managing WHO’s response. WHO applies the IMS regardless of the underlying hazard, scale or operational context of the emergency. The IMS approach is internationally recognized as best practice for emergency management.
+
+## Key concepts and principles
+
+Standardized emergency functions. These are key functions for any emergency response, brought together in a unified structure regardless of the number of people involved in the operations. For WHO, the core IMS functions are:
+
+- leadership and coordination
+- planning and monitoring
+- operations support and logistics
+- technical expertise and health operations
+- health information and epidemiology
+- partner coordination and engagement
+- finance and administration.
+
+Flexibility, adaptability and scalability. The IMS is applicable to all types and scales of emergencies. It can be easily adapted as needs evolve, while maintaining standards and predictability.
+
+Interoperability. The IMS allows WHO to interact and work more effectively with operational partners. This includes functional interoperability (for example, use of standardized terminology and procedures) and technological interoperability (for example, standardized telecommunications). Interoperability is also promoted through WHO’s adherence to interagency protocols and procedures.
+
+## Activation of the IMS
+
+Within 24 hours of grading, WHO will:
+
+- ensure the safety and security of all staff;[^28]
+- appoint an incident manager in country (and at regional and headquarters offices as required) for a minimum
+initial period of three months;
+- establish an incident management team (IMT) in country to cover critical IMS functions, which will be done
+initially through repurposing of country office staff, alongside ministry of health and field partners;
+- activate the emergency SOPs;
+- establish contact with government officials, partners and other relevant stakeholders;
+- determine the need for surge support to the country for critical IMS functions. This determination is made
+following an assessment of country office capacity to manage the emergency during the grading call. Surge support may also be needed at regional office and headquarters;
+- begin the deployment of surge support on a no regrets basis, as needed;
+- designate an interim PSEAH resource person;
+- elaborate the initial response objectives and action plan, until a more detailed plan is developed;
+- establish an incident management support team (IMST) at regional and headquarters levels to mobilize and coordinate Organization-wide and partner support
+- for Grade 2 and Grade 3 responses. The structure of IMSTs can vary, but always supports the in-country IMT functions as required. A focal point will be appointed at regional level, and if necessary, at headquarters level, to provide any required support for Grade 1 emergencies.
+
+
+
+[^28]  Ensuring the safety and security of staff is an ongoing activity and does not depend on grading.
+
+```
+
+
+````

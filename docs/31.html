@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="SUNG, Ji Yeon (Gigi)">
+<meta name="author" content="Ji Yeon (Gigi) Sung">
 <meta name="dcterms.date" content="2025-04-28">
 
-<title>AI Training 2025 - Prompt Engineering – Theory &amp; Individual Exercises</title>
+<title>Essential Prompting Techniques – 3.1 Use delimiters like ``` to separate the instruction and context</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,25 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -80,8 +114,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">AI Training 2025</span>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Essential Prompting Techniques</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -91,11 +125,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Main</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pretraining.html"> 
+    <a class="nav-link" href="./pretraining.html"> 
 <span class="menu-text">Pretraining</span></a>
   </li>  
 </ul>
@@ -110,33 +144,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
-  <li><a href="#key-concepts-decision-making" id="toc-key-concepts-decision-making" class="nav-link" data-scroll-target="#key-concepts-decision-making">2. Key Concepts &amp; Decision Making</a>
-  <ul class="collapse">
-  <li><a href="#llm-types" id="toc-llm-types" class="nav-link" data-scroll-target="#llm-types">2.1 LLM Types</a></li>
-  <li><a href="#when-why-use-prompt-engineering" id="toc-when-why-use-prompt-engineering" class="nav-link" data-scroll-target="#when-why-use-prompt-engineering">2.2 When &amp; Why Use Prompt Engineering</a></li>
-  </ul></li>
-  <li><a href="#core-prompting-techniques-20-min" id="toc-core-prompting-techniques-20-min" class="nav-link" data-scroll-target="#core-prompting-techniques-20-min">3. Core Prompting Techniques (20 min)</a></li>
-  <li><a href="#individual-exercises-15-min" id="toc-individual-exercises-15-min" class="nav-link" data-scroll-target="#individual-exercises-15-min">4. Individual Exercises (15 min)</a>
-  <ul class="collapse">
-  <li><a href="#exercise-1-scenario-based-decision-making" id="toc-exercise-1-scenario-based-decision-making" class="nav-link" data-scroll-target="#exercise-1-scenario-based-decision-making">Exercise 1: Scenario-Based Decision Making</a></li>
-  <li><a href="#exercise-2-practicing-prompt-techniques" id="toc-exercise-2-practicing-prompt-techniques" class="nav-link" data-scroll-target="#exercise-2-practicing-prompt-techniques">Exercise 2: Practicing Prompt Techniques</a></li>
-  </ul></li>
-  <li><a href="#takeaways" id="toc-takeaways" class="nav-link" data-scroll-target="#takeaways">5. Takeaways</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prompt Engineering – Theory &amp; Individual Exercises</h1>
+<h1 class="title">3.1 Use delimiters like ``` to separate the instruction and context</h1>
 </div>
 
 
@@ -146,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>SUNG, Ji Yeon (Gigi) </p>
+             <p>Ji Yeon (Gigi) Sung </p>
           </div>
   </div>
     
@@ -165,189 +180,119 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Presenter(s):</strong> SUNG, Ji Yeon (Gigi)<br>
-<strong>Duration:</strong> 60 min<br>
-<strong>Target Audience:</strong> Individual WHE officers with the least coding knowledge</p>
-<p><strong>Summary:</strong><br>
-This session introduces essential prompt engineering techniques to technical officers with little to no coding experience. The focus is on understanding decision rules to determine when prompt engineering is cost-effective for repetitive tasks. You can also practice prompt engineering techiniques with exercise materials below.</p>
-<hr>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
 <ul>
-<li><strong>Purpose of Session:</strong><br>
-Understand the fundamentals of prompt engineering and its application in automating workflows.</li>
-<li><strong>What is Prompt Engineering?</strong><br>
-A method to design effective prompts for AI tools, particularly when consistent output is required.</li>
-<li><strong>Use Case:</strong><br>
-Ideal for automating repetitive tasks and ensuring consistency in outputs.</li>
-<li><strong>Overview:</strong><br>
-Briefly review the session structure and objectives.</li>
+<li><p>Suppose you want to summarize a text from a pdf.</p></li>
+<li><p>In many cases, you will either</p>
+<ul>
+<li>Drag and drop the pdf file.</li>
+<li>Copy and paste the text.</li>
+</ul></li>
+<li><p>And give an instruction like “Summarize the text.”</p></li>
 </ul>
-<hr>
-</section>
-<section id="key-concepts-decision-making" class="level2">
-<h2 class="anchored" data-anchor-id="key-concepts-decision-making">2. Key Concepts &amp; Decision Making</h2>
-<section id="llm-types" class="level3">
-<h3 class="anchored" data-anchor-id="llm-types">2.1 LLM Types</h3>
+<section id="try-for-yourself." class="level4">
+<h4 class="anchored" data-anchor-id="try-for-yourself.">Try for yourself.</h4>
+<p><object data="data/ERF_incidentManagementSystem.pdf#navspan=0" type="application/pdf" width="100%" height="800"><a href="data/ERF_incidentManagementSystem.pdf#navspan=0" download="">Download PDF file.</a></object></p>
 <ol type="1">
-<li><strong>Base Models:</strong>
-<ul>
-<li>Not designed for conversation; they simply predict text based on input.</li>
-<li>For example, asking “What is the capital of France?” might return unexpected answers like “What is the capital of Egypt?” or “What is the capital of the USA?”</li>
-<li>Typically used as a starting point for fine-tuning.</li>
-</ul></li>
-<li><strong>Chat Models:</strong>
-<ul>
-<li>Examples include ChatGPT, Copilot, and Gemini.</li>
-<li>Primarily intended for end users, such as HIM technical officers.</li>
-</ul></li>
+<li>Download <a href="https://drive.google.com/file/d/11ZZmkaZbudp4MC-TL64tpqSlZsqYEVos/view?usp=sharing">this pdf file</a>.</li>
+<li>Open <a href="https://chatgpt.com/">ChatGPT website</a>.</li>
+<li>Tell ChatGPT to summarize the text.</li>
 </ol>
-</section>
-<section id="when-why-use-prompt-engineering" class="level3">
-<h3 class="anchored" data-anchor-id="when-why-use-prompt-engineering">2.2 When &amp; Why Use Prompt Engineering</h3>
-<ol type="1">
-<li><strong>Decision Rules &amp; Trade-offs:</strong>
+<p><br><br><br></p>
+<details>
+<summary>
+👎 Bad Practice
+</summary>
 <ul>
-<li>Assess whether the complexity and repetition of a task justify the effort of developing a detailed prompt.</li>
-<li><strong>Example Comparisons:</strong>
-<ul>
-<li><em>One-off questions</em> (e.g., “What is the medical representation of Cholera?”) vs.&nbsp;<em>repetitive workflows</em> (e.g., generating rapid risk analyses, situation reports, OSM).<br>
-</li>
-<li><em>Direct Q&amp;A</em> vs.&nbsp;<em>advanced prompt design</em> (unstructured long queries vs.&nbsp;step-by-step prompts with example formats).<br>
-</li>
-</ul></li>
-<li><em>(Ng, Zhou, and Sangani, n.d.)</em></li>
-</ul></li>
-<li><strong>Other Approaches:</strong>
-<ul>
-<li><strong>Fine-tuning:</strong> Customizing a base model for specific needs.</li>
-<li><strong>RAG (Retrieval Augmented Generation):</strong> Leveraging retrieval methods for domain-specific or up-to-date data.</li>
-<li><em>Note: These methods will be discussed further in the Managing AI Risks session.</em></li>
-</ul></li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="core-prompting-techniques-20-min" class="level2">
-<h2 class="anchored" data-anchor-id="core-prompting-techniques-20-min">3. Core Prompting Techniques (20 min)</h2>
-<ol type="1">
-<li><strong>In-Context Learning:</strong>
-<ul>
-<li>Techniques include Zero-shot, One-shot, and Few-shot prompting.</li>
-<li>Provides context to the model to achieve the desired output format.</li>
-<li>Larger LLMs may perform better even with simpler prompts.</li>
-</ul></li>
-<li><strong>Role Prompting:</strong>
-<ul>
-<li>Assigning a role to the model to ensure more consistent responses.</li>
-</ul></li>
-<li><strong>Chain-of-Thought Prompting:</strong>
-<ul>
-<li>Encourages the model to reason step by step.</li>
-<li><strong>Example Instruction:</strong><br>
-“Think step by step, explain each intermediate step, and then provide the final answer based on your analysis.”</li>
-</ul></li>
-<li><strong>Summarization &amp; Providing New Information:</strong>
-<ul>
-<li>Acknowledge that a model’s training data may not include the most recent events.</li>
-</ul></li>
-</ol>
-<hr>
-</section>
-<section id="individual-exercises-15-min" class="level2">
-<h2 class="anchored" data-anchor-id="individual-exercises-15-min">4. Individual Exercises (15 min)</h2>
-<section id="exercise-1-scenario-based-decision-making" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1-scenario-based-decision-making">Exercise 1: Scenario-Based Decision Making</h3>
-<ul>
-<li><p><strong>Task:</strong><br>
-Present 2–3 realistic scenarios that WHE officers might face (e.g., outbreak report, data analysis request, or drafting situation briefs).</p></li>
-<li><p><strong>Instructions:</strong></p>
-<ul>
-<li>Identify the best approach for each scenario using decision rules from Section 2.2.</li>
-<li>Consider factors such as task frequency (one-off vs.&nbsp;repeated), complexity (simple Q&amp;A vs.&nbsp;multi-step analysis), and urgency/accuracy needs.</li>
-</ul></li>
-<li><p><strong>Scenarios:</strong></p>
-<ol type="1">
-<li><strong>Scenario 1:</strong> Need a quick, one-off answer about the medical representation of Cholera (Direct Q&amp;A).<br>
-</li>
-<li><strong>Scenario 2:</strong> Generate weekly situation reports using a standard outline (requiring prompt engineering).<br>
-</li>
-<li><strong>Scenario 3:</strong> Obtain highly domain-specific or updated references for an outbreak (suggests an organization-wide approach, such as RAG or fine-tuning).</li>
-</ol></li>
+<li>You do not separate instruction from context.</li>
 </ul>
-</section>
-<section id="exercise-2-practicing-prompt-techniques" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2-practicing-prompt-techniques">Exercise 2: Practicing Prompt Techniques</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="an">Summarize the following excerpt from Emergency Response Framework guideline:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Incident management system</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>The grading of an emergency triggers the activation</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>of WHO’s IMS, which provides a standardized yet flexible</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>approach to managing WHO’s response. WHO applies</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>the IMS regardless of the underlying hazard, scale or</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>operational context of the emergency. The IMS approach</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>is internationally recognized as best practice for emergency</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>management.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Key concepts and principles</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Standardized emergency functions. These are key</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>functions for any emergency response, brought together in a</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>unified structure regardless of the number of people involved</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>in the operations. For WHO, the core IMS functions are:</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>•</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>•</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>•</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>•</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>•</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>•</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>•</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>leadership and coordination</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>planning and monitoring</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>operations support and logistics</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>technical expertise and health operations</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>health information and epidemiology</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>partner coordination and engagement</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>finance and administration.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>Flexibility, adaptability and scalability. The IMS is</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>applicable to all types and scales of emergencies. It can</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>be easily adapted as needs evolve, while maintaining</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>standards and predictability.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>13</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>28 Ensuring the safety and security of sta! is an ongoing activity and does not depend on grading</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<p><br></p>
+<details>
+<summary>
+👍 Good Practice
+</summary>
 <ul>
-<li><p><strong>Task:</strong><br>
-Generate a weekly situation report for occupied Palestine territory for 01 to 13 October 2024 using provided SITREP data.</p></li>
-<li><p><strong>Subtasks:</strong></p>
-<ol type="1">
-<li><p><strong>Zero-shot Prompt:</strong></p>
-<pre><code>Generate a weekly situation report for the period of 01–13 October 2024 related to conflict-affected areas in Gaza, referencing the information in the {text} above.</code></pre></li>
-<li><p><strong>Few-shot Prompt:</strong></p>
-<ul>
-<li><p><strong>SITREP Data:</strong></p>
-<pre><code>41,950 deaths and 97,550 injuries reported.
-1.9 million displaced (90% of the population), many multiple times.
-Overcrowded shelters offer 1.5m² per person, far below the minimum Sphere standard of 3.5m².
-86% of Gaza under evacuation orders, leaving civilians with no safe relocation options.
-1.2 million children and 75% of women report psychological distress.
-… </code></pre></li>
-<li><p><strong>SITREP Format:</strong></p>
-<pre><code>SITREP Format:
-1. Key Highlights:
-2. Background:
-3. Health System Updates:
-4. Priority Needs &amp; Actions:
-5. Conclusion:</code></pre></li>
-<li><p><strong>Instruction:</strong><br>
-Using the above format, generate a weekly situation report.</p></li>
-</ul></li>
-<li><p><strong>Role Prompt:</strong></p>
-<pre><code>You are a WHO technical officer specializing in emergency response. Your task is to draft a weekly situation report on the ongoing crisis in occupied Palestine territory.</code></pre></li>
-<li><p><strong>Chain-of-Thought Prompt:</strong></p>
-<ul>
-<li><strong>Instruction:</strong><br>
-First, break down the main categories of information:
-<ol type="1">
-<li>Key data points (casualties, injuries, displacements, etc.)</li>
-<li>Most critical health concerns</li>
-<li>Potential solutions or actions</li>
-<li>Final structured SITREP summary<br>
-Only provide the final SITREP summary after detailing and analyzing these steps.</li>
-</ol></li>
-</ul></li>
-</ol></li>
+<li>You use delimiters to separate instruction from context.</li>
 </ul>
-<hr>
-</section>
-</section>
-<section id="takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="takeaways">5. Takeaways</h2>
-<ul>
-<li>Reflect on the cost and benefit of developing detailed prompts before implementation.</li>
-<li>Recognize the value of iterative prompt design and verification to improve outcomes.</li>
-</ul>
-<hr>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<ul>
-<li><p><strong>Ng, Andrew, Sharon Zhou, and Amit Sangani.</strong><br>
-<em>Improving Accuracy of LLM Applications - DeepLearning.AI.</em><br>
-<a href="https://learn.deeplearning.ai/courses/improving-accuracy-of-llm-applications/lesson/zd29x/introduction">DeepLearning.AI</a></p></li>
-<li><p><strong>Sangani, Amit, and Andrew Ng.</strong><br>
-<em>Prompt Engineering with Llama 2&amp;3 - DeepLearning.AI.</em><br>
-<a href="https://learn.deeplearning.ai/courses/prompt-engineering-with-llama-2/lesson/mpjme/prompt-engineering-techniques">DeepLearning.AI</a></p></li>
-</ul>
-<hr>
-<p><strong>Keywords (English / 한국어):</strong><br>
-- <strong>Prompt Engineering</strong> / <strong>프롬프트 엔지니어링</strong><br>
-- <strong>LLM Types</strong> / <strong>LLM 유형</strong><br>
-- <strong>Decision Making</strong> / <strong>의사결정</strong><br>
-- <strong>Chain-of-Thought</strong> / <strong>체인 오브 띠-생각</strong><br>
-- <strong>Interactive Exercises</strong> / <strong>인터랙티브 실습</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Summarize the following excerpt from Emergency Response Framework guideline:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">Incident management system</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in">The grading of an emergency triggers the activation</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">of WHO’s IMS, which provides a standardized yet flexible</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">approach to managing WHO’s response. WHO applies</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="in">the IMS regardless of the underlying hazard, scale or</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">operational context of the emergency. The IMS approach</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">is internationally recognized as best practice for emergency</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in">management.</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">Key concepts and principles</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="in">Standardized emergency functions. These are key</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in">functions for any emergency response, brought together in a</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="in">unified structure regardless of the number of people involved</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="in">in the operations. For WHO, the core IMS functions are:</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="in">•</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="in">•</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in">•</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="in">•</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="in">•</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in">•</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">•</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="in">leadership and coordination</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="in">planning and monitoring</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="in">operations support and logistics</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="in">technical expertise and health operations</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="in">health information and epidemiology</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="in">partner coordination and engagement</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="in">finance and administration.</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="in">Flexibility, adaptability and scalability. The IMS is</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="in">applicable to all types and scales of emergencies. It can</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="in">be easily adapted as needs evolve, while maintaining</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="in">standards and predictability.</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="in">13</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="in">28 Ensuring the safety and security of sta! is an ongoing activity and does not depend on grading</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 
 
 </section>

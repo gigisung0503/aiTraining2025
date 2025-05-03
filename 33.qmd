@@ -1,0 +1,133 @@
+---
+title: "3.3 Translate tables and graphs (advanced)"
+author: "Ji Yeon (Gigi) Sung" 
+date: "2025-04-28"
+---
+
+
+
+- GPT is bad at interpreting tables and graphs. 
+
+- Especially when there are **merged cells** in a table, and **complex legends** in a graph. 
+  
+- For the most accurate interpretation, you need to **translate the tables and graphs** into computer language.
+
+
+
+#### 💻 Tables? Use HTML
+
+#### Try for yourself.
+
+
+{{< pdf data/ERF_table.pdf width=100% height=800 >}}
+
+
+1. Tell chatgpt to recreate the *Table 2*.
+2. Check if all the elements are included:
+   1. Title
+   2. Number of rows and columns
+   3. Column names
+   4. Footnotes
+3. Merged cell is rarely recognized.
+
+</br></br></br>
+
+👍 Table 2 translated into html:
+
+ChatGPT will understand the table elements more clearly. 
+
+See how it is [rendered](data/table.html) by ChatGPT (or computer).
+
+```html
+<h1>Table 2. Organizational responsibilities and accountabilities for emergency response operations</h1>
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Grade</th>
+      <th colspan="3">Responsibilities</th>
+      
+    </tr>
+    <tr>
+      <th>Technical and operational support</th>
+      <th>Operational oversight</th>
+      <th>Accountability*</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>
+        - IM at country office<br>
+        - As needed: IMST in regional office
+      </td>
+      <td>Delegated to RED</td>
+      <td>Regional Director</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>
+        - IM at country office, and IMST in regional office<br>
+        - As needed: IMST in headquarters
+      </td>
+      <td>Delegated to RED</td>
+      <td>Regional Director</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>IM and IMSTs at three levels</td>
+      <td>Delegated to RED or Director WHE/headquarters</td>
+      <td>Executive Director of WHE or Regional Director**</td>
+    </tr>
+  </tbody>
+</table>
+
+--- 
+
+* The Executive Director of WHE, on behalf of the Director-General, is operationally accountable for all emergency responses. Regardless of grade, the Executive Director of WHE has the delegation of authority to intervene under any circumstances that he or she may deem appropriate. 
+
+** To be agreed by the Executive Director of WHE and the Regional Director(s) within 48 hours of grading. For events where the Executive Director of WHE is accountable, operational oversight lies with a Director WHE/headquarters, to be specified depending on the type of event. For events where the Regional Director is accountable, operational oversight lies with the Regional Emergency Director.
+
+```
+
+
+</br></br></br>
+
+
+#### 📈 Graphs? Use code
+
+
+<iframe src="data/penguin.jpg" width="500px" height="400px"></iframe>
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+species = ("Adelie", "Chinstrap", "Gentoo")
+penguin_means = {
+    'Bill Depth': (18.35, 18.43, 14.98),
+    'Bill Length': (38.79, 48.83, 47.50),
+    'Flipper Length': (189.95, 195.82, 217.19),
+}
+
+x = np.arange(len(species))  # the label locations
+width = 0.25  # the width of the bars
+multiplier = 0
+
+fig, ax = plt.subplots(layout='constrained')
+
+for attribute, measurement in penguin_means.items():
+    offset = width * multiplier
+    rects = ax.bar(x + offset, measurement, width, label=attribute)
+    ax.bar_label(rects, padding=3)
+    multiplier += 1
+
+# Add some text for labels, title and custom x-axis tick labels, etc.
+ax.set_ylabel('Length (mm)')
+ax.set_title('Penguin attributes by species')
+ax.set_xticks(x + width, species)
+ax.legend(loc='upper left', ncols=3)
+ax.set_ylim(0, 250)
+
+plt.show()
+```
+
