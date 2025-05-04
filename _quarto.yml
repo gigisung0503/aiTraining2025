@@ -9,8 +9,9 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Main
-      # - about.qmd
+        text: Prompting Techniques
+      - href: pretraining.qmd
+        text: Managing AI Risk
       - href: pretraining.qmd
         text: Pretraining
 

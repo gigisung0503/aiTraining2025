@@ -26,7 +26,8 @@ and so on...
 
 #### Try for yourself.
 
-{{< pdf data/ERF_incidentManagementSystem.pdf#navspan=0 width=100% height=800 >}}
+<iframe src="https://drive.google.com/file/d/11ZZmkaZbudp4MC-TL64tpqSlZsqYEVos/preview" width="100%" height="600px"></iframe>
+
 
 1. Copy and paste the text to Word or texteditor.
 2. Clean the text.

@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -92,7 +126,11 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Main</span></a>
+<span class="menu-text">Prompting Techniques</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./pretraining.html"> 
+<span class="menu-text">Managing AI Risk</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./pretraining.html"> 
@@ -123,15 +161,22 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#use-delimiters-like-to-separate-the-instruction-and-context" id="toc-use-delimiters-like-to-separate-the-instruction-and-context" class="nav-link" data-scroll-target="#use-delimiters-like-to-separate-the-instruction-and-context">3.1 Use delimiters like ``` to separate the instruction and context</a></li>
   <li><a href="#use-the-hierarchy-heading-subheading-list-and-footnotes" id="toc-use-the-hierarchy-heading-subheading-list-and-footnotes" class="nav-link" data-scroll-target="#use-the-hierarchy-heading-subheading-list-and-footnotes">3.2 Use the hierarchy: Heading, subheading, list, and footnotes</a></li>
   <li><a href="#translate-tables-and-graphs-advanced" id="toc-translate-tables-and-graphs-advanced" class="nav-link" data-scroll-target="#translate-tables-and-graphs-advanced">3.3 Translate tables and graphs (advanced)</a></li>
+  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">3.4 Wrap-up</a></li>
   </ul></li>
-  <li><a href="#lab" id="toc-lab" class="nav-link" data-scroll-target="#lab">4 Hands-on Formatting Lab</a>
+  <li><a href="#beyond-formatting-well-known-prompt-engineering-techniques" id="toc-beyond-formatting-well-known-prompt-engineering-techniques" class="nav-link" data-scroll-target="#beyond-formatting-well-known-prompt-engineering-techniques">4 Beyond Formatting: <br> Well-known Prompt Engineering Techniques</a>
+  <ul class="collapse">
+  <li><a href="#divide-up-long-context" id="toc-divide-up-long-context" class="nav-link" data-scroll-target="#divide-up-long-context">4.1 Divide up long context</a></li>
+  <li><a href="#place-instruction-at-the-top-and-the-bottom" id="toc-place-instruction-at-the-top-and-the-bottom" class="nav-link" data-scroll-target="#place-instruction-at-the-top-and-the-bottom">4.2 Place instruction at the top and the bottom</a></li>
+  <li><a href="#place-chain-of-thought-instruction-at-the-end-of-prompt" id="toc-place-chain-of-thought-instruction-at-the-end-of-prompt" class="nav-link" data-scroll-target="#place-chain-of-thought-instruction-at-the-end-of-prompt">4.3 Place chain-of-thought instruction at the end of prompt</a></li>
+  <li><a href="#start-with-zero-shot-and-then-few-shot" id="toc-start-with-zero-shot-and-then-few-shot" class="nav-link" data-scroll-target="#start-with-zero-shot-and-then-few-shot">4.4 Start with Zero-shot and then Few-shot</a></li>
+  <li><a href="#articulate-the-desired-output-format-through-examples" id="toc-articulate-the-desired-output-format-through-examples" class="nav-link" data-scroll-target="#articulate-the-desired-output-format-through-examples">4.5. Articulate the desired output format through examples</a></li>
+  </ul></li>
+  <li><a href="#wrap-up-1" id="toc-wrap-up-1" class="nav-link" data-scroll-target="#wrap-up-1">5 Wrap-up</a></li>
+  <li><a href="#hands-on-formatting-lab" id="toc-hands-on-formatting-lab" class="nav-link" data-scroll-target="#hands-on-formatting-lab">6 Hands-on Formatting Lab</a>
   <ul class="collapse">
   <li><a href="#step-by-step" id="toc-step-by-step" class="nav-link" data-scroll-target="#step-by-step">Step-by-step</a></li>
   </ul></li>
-  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced">5 Advanced Techniques Teaser</a></li>
-  <li><a href="#mini-quiz" id="toc-mini-quiz" class="nav-link" data-scroll-target="#mini-quiz">6 Mini-Quiz</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">7 Resources</a></li>
-  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">8 Wrap-up</a></li>
   </ul>
 </nav>
     </div>
@@ -242,9 +287,135 @@ merged
 </details>
 </blockquote>
 </section>
+<section id="wrap-up" class="level3">
+<h3 class="anchored" data-anchor-id="wrap-up">3.4 Wrap-up</h3>
+<blockquote class="blockquote">
+<p><mark><strong>“Give ChatGPT an ah-hah moment by formatting messages with their language.”</strong></mark></p>
+<p>▶︎ Use a delimiter like ““” to separate the instruction and context</p>
+<p>▶︎ Use a hierarchy: Heading, subheading, list, and footnotes.</p>
+<p>▶︎ Translate tables and graphs</p>
+</blockquote>
 </section>
-<section id="lab" class="level2">
-<h2 class="anchored" data-anchor-id="lab">4 Hands-on Formatting Lab</h2>
+</section>
+<section id="beyond-formatting-well-known-prompt-engineering-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-formatting-well-known-prompt-engineering-techniques">4 Beyond Formatting: <br> Well-known Prompt Engineering Techniques</h2>
+<section id="divide-up-long-context" class="level3">
+<h3 class="anchored" data-anchor-id="divide-up-long-context">4.1 Divide up long context</h3>
+<blockquote class="blockquote">
+<p>“We’ve observed very strong performance at complex tasks with a mix of relevant and irrelevant code and documents <strong>in the range of hundreds of thousands of tokens</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.”</p>
+</blockquote>
+<ul>
+<li><strong>Token</strong>→<strong>Word</strong>: 1 token ≈ 0.75 English words</li>
+<li><strong>Word</strong>→<strong>Page</strong>: 1 page ≈ 300 words (wpp = words per page)</li>
+<li>“hundreds of thousands of tokens” → 250–750 pages</li>
+</ul>
+</section>
+<section id="place-instruction-at-the-top-and-the-bottom" class="level3">
+<h3 class="anchored" data-anchor-id="place-instruction-at-the-top-and-the-bottom">4.2 Place instruction at the top and the bottom</h3>
+<blockquote class="blockquote">
+<p>“In our experiments, we found that <strong>it was optimal to put critical instructions, including the user query, at both the top and the bottom of the prompt</strong>; this elicited marginally better performance from the model than putting them only at the top, and much better performance than only at the bottom<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.”</p>
+</blockquote>
+<ul>
+<li>Performance: <br> Instruction at both <strong>the top and the bottom</strong> &gt; Only at the <strong>top</strong> &gt; Only at the <strong>bottom</strong></li>
+</ul>
+</section>
+<section id="place-chain-of-thought-instruction-at-the-end-of-prompt" class="level3">
+<h3 class="anchored" data-anchor-id="place-chain-of-thought-instruction-at-the-end-of-prompt">4.3 Place chain-of-thought instruction at the end of prompt</h3>
+<blockquote class="blockquote">
+<p>“First, think carefully step by step about what documents are needed to answer the query. <br> Then, print out the TITLE and ID of each document. <br> Then, format the IDs into a list<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.”</p>
+</blockquote>
+<ul>
+<li>Divide up instruction step by step and place it at <strong>the end of prompt</strong>.</li>
+</ul>
+</section>
+<section id="start-with-zero-shot-and-then-few-shot" class="level3">
+<h3 class="anchored" data-anchor-id="start-with-zero-shot-and-then-few-shot">4.4 Start with Zero-shot and then Few-shot</h3>
+<p>✅ Zero-shot</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="an">Extract keywords from the below text:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in"># WHO’s Role During Health Emergencies</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">As the health lead for the United Nations, a primary responsibility of the World Health Organization (WHO) is to respond to natural disasters and disease outbreaks. This role includes supporting countries in building their national capacities and advocating for preparedness, developing strategies and global response plans for health emergencies, and providing operational response activities.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Keywords:</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>✅ Few-shot</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Extract keywords from the corresponding texts below:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">Text 1: Stripe provides APIs that web developers can use to integrate payment processing into their websites and mobile applications.</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in">Keywords 1: Stripe, payment processing</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">Text 2: OpenAI has trained cutting-edge language models that are very good at understanding and generating text. Our API provides access to these models and can be used to solve virtually any task that involves processing language.</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="in">Keywords 2: OpenAI, language models</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">Text 3: # WHO’s Role During Health Emergencies</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in">As the health lead for the United Nations, a primary responsibility of the World Health Organization (WHO) is to respond to natural disasters and disease outbreaks. This role includes supporting countries in building their national capacities and advocating for preparedness, developing strategies and global response plans for health emergencies, and providing operational response activities.</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>Keywords 3:</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="articulate-the-desired-output-format-through-examples" class="level3">
+<h3 class="anchored" data-anchor-id="articulate-the-desired-output-format-through-examples">4.5. Articulate the desired output format through examples</h3>
+<p>✅ Without output format</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Extract the entities mentioned in the text below. Extract the following 4 entity types: company names, people names, specific topics and themes.</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="in">{Context}</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>✅ With output format</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Extract the important entities mentioned in the text below. First extract all company names, then extract all people names, then extract specific topics which fit the content and finally extract general overarching themes</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Desired format:</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>Company names: &lt;comma_separated_list_of_company_names&gt;</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>People names: &lt;comma_separated_list_of_people_names&gt;</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>Specific topics: &lt;comma_separated_list_of_topics&gt;</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>General themes: &lt;comma_separated_list_of_themes&gt;</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="in">{Context}</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="wrap-up-1" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up-1">5 Wrap-up</h2>
+<table class="table">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Key Take-away</th>
+<th>One-liner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Structure = Success</strong></td>
+<td>Prompting is information architecture.</td>
+</tr>
+<tr class="even">
+<td><strong>Formatting ladder</strong></td>
+<td>Delimit → Hierarchy → HTML → Code.</td>
+</tr>
+<tr class="odd">
+<td><strong>Use advanced tools sparingly</strong></td>
+<td>Few-shot &amp; CoT <br>→ Think of cost and benfits of developing a well designed prompt.</td>
+</tr>
+<tr class="even">
+<td><strong>Keep iterating</strong></td>
+<td>Cheat-sheet, GitHub, #prompt-showcase.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="hands-on-formatting-lab" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on-formatting-lab">6 Hands-on Formatting Lab</h2>
 <p><strong>Materials</strong></p>
 <table class="table">
 <thead>
@@ -275,66 +446,6 @@ merged
 <hr>
 </section>
 </section>
-<section id="advanced" class="level2">
-<h2 class="anchored" data-anchor-id="advanced">5 Advanced Techniques Teaser</h2>
-<table class="table">
-<colgroup>
-<col style="width: 28%">
-<col style="width: 39%">
-<col style="width: 31%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Technique</th>
-<th>1-line prompt snippet</th>
-<th>When to use</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Few-shot</strong></td>
-<td><code>Q: … A: …</code></td>
-<td>Enforce style</td>
-</tr>
-<tr class="even">
-<td><strong>Chain-of-Thought</strong></td>
-<td><code>Let's think step by step…</code></td>
-<td>Calculations, logic</td>
-</tr>
-<tr class="odd">
-<td><strong>Self-critique</strong></td>
-<td><code>Evaluate your own answer…</code></td>
-<td>Sensitive data, audits</td>
-</tr>
-<tr class="even">
-<td><strong>Split-prompt</strong></td>
-<td>Chunk long context</td>
-<td>&gt; 16 k tokens</td>
-</tr>
-</tbody>
-</table>
-<p><em>(Treat them as <strong>scalpels</strong>, not hammers.)</em></p>
-<hr>
-</section>
-<section id="mini-quiz" class="level2">
-<h2 class="anchored" data-anchor-id="mini-quiz">6 Mini-Quiz</h2>
-<p>Embed a Mentimeter poll (live slide deck) here, or use this fallback:</p>
-<ol type="1">
-<li><em>Which delimiter beats hallucinated headings?</em>
-<ol type="a">
-<li><code>_</code> b) ``` c) — → <strong>b</strong></li>
-</ol></li>
-<li><em>Smallest complete “shot” in few-shot?</em>
-<ol type="a">
-<li>1 answer b) 1 Q-A pair c) 3 pairs → <strong>b</strong></li>
-</ol></li>
-<li><em>Kirkpatrick Level 2 measures…</em>
-<ol type="a">
-<li>Satisfaction b) On-the-job behaviour c) Knowledge → <strong>c</strong></li>
-</ol></li>
-</ol>
-<hr>
-</section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">7 Resources</h2>
 <ul>
@@ -342,62 +453,19 @@ merged
 <li>GitHub repo <code>who-emro/prompt-lab</code></li>
 <li>OpenAI <strong>Best Practices for Prompt Engineering</strong></li>
 </ul>
-<hr>
-</section>
-<section id="wrap-up" class="level2">
-<h2 class="anchored" data-anchor-id="wrap-up">8 Wrap-up</h2>
-<table class="table">
-<colgroup>
-<col style="width: 45%">
-<col style="width: 54%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Key Take-away</th>
-<th>One-liner</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Structure = Success</strong></td>
-<td>Prompting is information architecture.</td>
-</tr>
-<tr class="even">
-<td><strong>Formatting ladder</strong></td>
-<td>Delimit → Hierarchy → HTML → Code.</td>
-</tr>
-<tr class="odd">
-<td><strong>Hands-on wins</strong></td>
-<td>10 minutes cut hallucinations by 60 %.</td>
-</tr>
-<tr class="even">
-<td><strong>Use advanced tools sparingly</strong></td>
-<td>Few-shot &amp; CoT = precision scalpels.</td>
-</tr>
-<tr class="odd">
-<td><strong>Keep iterating</strong></td>
-<td>Cheat-sheet, GitHub, #prompt-showcase.</td>
-</tr>
-</tbody>
-</table>
-<p>::: {.callout-important} <strong>Closing line</strong></p>
-<blockquote class="blockquote">
-<p>From <em>PDF chaos</em> to <em>machine-ready reports</em>—your next sitrep is one prompt away. See you in #prompt-showcase! :::</p>
-</blockquote>
-<pre><code>
-### How to publish
-
-1. Place this file (e.g., `index.qmd`) in a GitHub repo with a `quarto.yml`.  
-2. Run `quarto publish gh-pages` or enable GitHub Pages.  
-3. Share the URL in your **wrap-up slide** so participants can revisit anytime.</code></pre>
-<hr>
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><em>OpenAI. n.d. “Text Generation and Prompting - OpenAI API.” Accessed May 1, 2025. https://platform.openai.com</em><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Ibid.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Ibid.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -64,10 +64,123 @@ In the next 45 minutes you’ll learn **how a few formatting tricks can turn mes
 > <details><summary>Answer</summary> merged </details>
 
 
+### 3.4 Wrap-up
+
+> <mark>**"Give ChatGPT an ah-hah moment by formatting messages with their language."**</mark>
+> 
+> ▶︎ Use a delimiter like """ to separate the instruction and context
+>
+> ▶︎ Use a hierarchy: Heading, subheading, list, and footnotes.
+>
+> ▶︎ Translate tables and graphs
+
+
+## 4 Beyond Formatting: </br> Well-known Prompt Engineering Techniques 
+
+### 4.1 Divide up long context
+
+> "We've observed very strong performance at complex tasks with a mix of relevant and irrelevant code and documents **in the range of hundreds of thousands of tokens**[^1]." 
+
+- **Token**→**Word**: 1 token ≈ 0.75 English words
+- **Word**→**Page**: 1 page ≈ 300 words (wpp = words per page)
+- “hundreds of thousands of tokens” → 250–750 pages
+
+### 4.2 Place instruction at the top and the bottom
+
+> "In our experiments, we found that **it was optimal to put critical instructions, including the user query, at both the top and the bottom of the prompt**; this elicited marginally better performance from the model than putting them only at the top, and much better performance than only at the bottom[^2]."
+
+- Performance: </br> Instruction at both **the top and the bottom** > Only at the **top** > Only at the **bottom**
+
+### 4.3 Place chain-of-thought instruction at the end of prompt
+
+> "First, think carefully step by step about what documents are needed to answer the query. </br>
+Then, print out the TITLE and ID of each document. </br>
+Then, format the IDs into a list[^3]."
+
+- Divide up instruction step by step and place it at **the end of prompt**.
+
+### 4.4 Start with Zero-shot and then Few-shot
+
+✅ Zero-shot
+````markdown
+Extract keywords from the below text:
+
+```
+# WHO’s Role During Health Emergencies
+As the health lead for the United Nations, a primary responsibility of the World Health Organization (WHO) is to respond to natural disasters and disease outbreaks. This role includes supporting countries in building their national capacities and advocating for preparedness, developing strategies and global response plans for health emergencies, and providing operational response activities.
+
+```
+
+Keywords:
+
+````
+
+✅ Few-shot
+
+
+````markdown
+
+Extract keywords from the corresponding texts below:
+
+```
+Text 1: Stripe provides APIs that web developers can use to integrate payment processing into their websites and mobile applications.
+Keywords 1: Stripe, payment processing
+
+Text 2: OpenAI has trained cutting-edge language models that are very good at understanding and generating text. Our API provides access to these models and can be used to solve virtually any task that involves processing language.
+Keywords 2: OpenAI, language models
+
+Text 3: # WHO’s Role During Health Emergencies
+As the health lead for the United Nations, a primary responsibility of the World Health Organization (WHO) is to respond to natural disasters and disease outbreaks. This role includes supporting countries in building their national capacities and advocating for preparedness, developing strategies and global response plans for health emergencies, and providing operational response activities.
+
+```
+
+Keywords 3:
+
+
+````
+
+### 4.5. Articulate the desired output format through examples
+
+✅ Without output format 
+
+````markdown
+Extract the entities mentioned in the text below. Extract the following 4 entity types: company names, people names, specific topics and themes.
+
+```
+{Context}
+```
+
+````
+
+
+✅ With output format 
+
+````markdown
+Extract the important entities mentioned in the text below. First extract all company names, then extract all people names, then extract specific topics which fit the content and finally extract general overarching themes
+
+Desired format:
+Company names: <comma_separated_list_of_company_names>
+People names: <comma_separated_list_of_people_names>
+Specific topics: <comma_separated_list_of_topics>
+General themes: <comma_separated_list_of_themes>
+
+```
+{Context}
+```
+
+````
+## 5 Wrap-up
+
+| Key Take-away                    | One-liner                              |
+| -------------------------------- | -------------------------------------- |
+| **Structure = Success**          | Prompting is information architecture. |
+| **Formatting ladder**            | Delimit → Hierarchy → HTML → Code.     |
+| **Use advanced tools sparingly** | Few-shot & CoT <br>→ Think of cost and benfits of developing a well designed prompt. |
+| **Keep iterating**               | Cheat-sheet, GitHub, #prompt-showcase. |
 
 
 
-## 4  Hands-on Formatting Lab  {#lab}
+## 6  Hands-on Formatting Lab 
 
 
 **Materials**
@@ -86,79 +199,17 @@ In the next 45 minutes you’ll learn **how a few formatting tricks can turn mes
 
 ---
 
-## 5  Advanced Techniques Teaser  {#advanced}
-
-| Technique            | 1-line prompt snippet       | When to use            |
-| -------------------- | --------------------------- | ---------------------- |
-| **Few-shot**         | `Q: … A: …`                 | Enforce style          |
-| **Chain-of-Thought** | `Let's think step by step…` | Calculations, logic    |
-| **Self-critique**    | `Evaluate your own answer…` | Sensitive data, audits |
-| **Split-prompt**     | Chunk long context          | > 16 k tokens          |
-
-*(Treat them as **scalpels**, not hammers.)*
-
----
-
-## 6  Mini-Quiz
-
-Embed a Mentimeter poll (live slide deck) here, or use this fallback:
-
-1. *Which delimiter beats hallucinated headings?*
-   a) `_`  b) \`\`\`  c) —   → **b**
-
-2. *Smallest complete “shot” in few-shot?*
-   a) 1 answer  b) 1 Q-A pair   c) 3 pairs   → **b**
-
-3. *Kirkpatrick Level 2 measures…*
-   a) Satisfaction   b) On-the-job behaviour   c) Knowledge   → **c**
-
----
-
 ## 7  Resources
 
 * One-page cheat-sheet » *download*
 * GitHub repo `who-emro/prompt-lab`
 * OpenAI **Best Practices for Prompt Engineering**
 
----
-
-## 8  Wrap-up  {#wrap-up}
-
-| Key Take-away                    | One-liner                              |
-| -------------------------------- | -------------------------------------- |
-| **Structure = Success**          | Prompting is information architecture. |
-| **Formatting ladder**            | Delimit → Hierarchy → HTML → Code.     |
-| **Hands-on wins**                | 10 minutes cut hallucinations by 60 %. |
-| **Use advanced tools sparingly** | Few-shot & CoT = precision scalpels.   |
-| **Keep iterating**               | Cheat-sheet, GitHub, #prompt-showcase. |
-
-\::: {.callout-important}
-**Closing line**
-
-> From *PDF chaos* to *machine-ready reports*—your next sitrep is one prompt away.
-> See you in #prompt-showcase!
-> \:::
-
-```
-
-### How to publish
-
-1. Place this file (e.g., `index.qmd`) in a GitHub repo with a `quarto.yml`.  
-2. Run `quarto publish gh-pages` or enable GitHub Pages.  
-3. Share the URL in your **wrap-up slide** so participants can revisit anytime.
-```
 
 
 
 
 
-
-
-
-
-
-
----
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+[^1]: *OpenAI. n.d. “Text Generation and Prompting - OpenAI API.” Accessed May 1, 2025. https://platform.openai.com*
+[^2]: Ibid.
+[^3]: Ibid.

@@ -15,7 +15,7 @@ date: "2025-04-28"
 
 #### Try for yourself.
 
-{{< pdf data/ERF_incidentManagementSystem.pdf#navspan=0 width=100% height=800 >}}
+<iframe src="https://drive.google.com/file/d/11ZZmkaZbudp4MC-TL64tpqSlZsqYEVos/preview" width="100%" height="600px"></iframe>
 
 
 1. Download [this pdf file](https://drive.google.com/file/d/11ZZmkaZbudp4MC-TL64tpqSlZsqYEVos/view?usp=sharing).
