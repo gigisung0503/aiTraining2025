@@ -179,7 +179,7 @@ General themes: <comma_separated_list_of_themes>
 | **Keep iterating**               | Cheat-sheet, GitHub, #prompt-showcase. |
 
 
-
+<!-- 
 ## 6  Hands-on Formatting Lab 
 
 
@@ -204,7 +204,7 @@ General themes: <comma_separated_list_of_themes>
 * One-page cheat-sheet » *download*
 * GitHub repo `who-emro/prompt-lab`
 * OpenAI **Best Practices for Prompt Engineering**
-
+ -->
 
 
 
