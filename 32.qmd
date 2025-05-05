@@ -33,13 +33,17 @@ and so on...
 2. Clean the text.
 3. Apply markdown syntax.
 
-<details>
-<summary>👍 Good Practice</summary>
+**Tips**
 
 - You use markdown to give hierarchy to the document.
 - You use # to indicate heading levels.
 - You use - for lists.
-- You use [^28] for footnote.
+- You use [^28] for a footnote.
+
+
+<details>
+<summary>👍 Good Practice</summary>
+
 
 ````markdown
 Summarize the following excerpt from Emergency Response Framework guideline:
@@ -87,7 +91,7 @@ following an assessment of country office capacity to manage the emergency durin
 
 
 
-[^28]  Ensuring the safety and security of staff is an ongoing activity and does not depend on grading.
+[^28]:  Ensuring the safety and security of staff is an ongoing activity and does not depend on grading.
 
 ```
 
