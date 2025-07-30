@@ -42,6 +42,58 @@ and so on...
 
 
 <details>
+<summary>👎 Bad Practice</summary>
+
+- You do not format the excerpt with markdown.
+
+````markdown
+Summarize the following excerpt from Emergency Response Framework guideline:
+
+```
+Incident management system
+The grading of an emergency triggers the activation
+of WHO’s IMS, which provides a standardized yet flexible
+approach to managing WHO’s response. WHO applies
+the IMS regardless of the underlying hazard, scale or
+operational context of the emergency. The IMS approach
+is internationally recognized as best practice for emergency
+management.
+Key concepts and principles
+Standardized emergency functions. These are key
+functions for any emergency response, brought together in a
+unified structure regardless of the number of people involved
+in the operations. For WHO, the core IMS functions are:
+•
+•
+•
+•
+•
+•
+•
+leadership and coordination
+planning and monitoring
+operations support and logistics
+technical expertise and health operations
+health information and epidemiology
+partner coordination and engagement
+finance and administration.
+Flexibility, adaptability and scalability. The IMS is
+applicable to all types and scales of emergencies. It can
+be easily adapted as needs evolve, while maintaining
+standards and predictability.
+
+13
+
+28 Ensuring the safety and security of sta! is an ongoing activity and does not depend on grading
+```
+````
+</details>
+
+</br>
+
+
+
+<details>
 <summary>👍 Good Practice</summary>
 
 
